@@ -1,0 +1,116 @@
+{
+  "sources": [
+    {
+      "name": "ABC News",
+      "bias": "lean left"
+    },
+    {
+      "name": "Associated Press",
+      "bias": "center"
+    },
+    {
+      "name": "BBC News",
+      "bias": "center"
+    },
+    {
+      "name": "Breitbart News",
+      "bias": "right"
+    },
+    {
+      "name": "Buzzfeed",
+      "bias": "lean left"
+    },
+    {
+      "name": "C-SPAN",
+      "bias": "center"
+    },
+    {
+      "name": "CBS News",
+      "bias": "lean left"
+    },
+    {
+      "name": "CNBC",
+      "bias": "center"
+    },
+    {
+      "name": "Drudge Report",
+      "bias": "right"
+    },
+    {
+      "name": "FiveThirtyEight",
+      "bias": "center"
+    },
+    {
+      "name": "Forbes",
+      "bias": "center"
+    },
+    {
+      "name": "Fox News",
+      "bias": "right"
+    },
+    {
+      "name": "Huffington Post",
+      "bias": "left"
+    },
+    {
+      "name": "InfoWars",
+      "bias": "right"
+    },
+    {
+      "name": "MSNBC",
+      "bias": "left"
+    },
+    {
+      "name": "NBC News",
+      "bias": "lean left"
+    },
+    {
+      "name": "New York Times",
+      "bias": "lean left"
+    },
+    {
+      "name": "Newsweek",
+      "bias": "lean left"
+    },
+    {
+      "name": "NPR",
+      "bias": "center"
+    },
+    {
+      "name": "Politico",
+      "bias": "center"
+    },
+    {
+      "name": "Reuters",
+      "bias": "center"
+    },
+    {
+      "name": "Teen Vogue",
+      "bias": "lean left"
+    },
+    {
+      "name": "The Atlantic",
+      "bias": "lean left"
+    },
+    {
+      "name": "The Hill",
+      "bias": "center"
+    },
+    {
+      "name": "USA Today",
+      "bias": "center"
+    },
+    {
+      "name": "Vox",
+      "bias": "lean left"
+    },
+    {
+      "name": "Wall Street Journal",
+      "bias": "center"
+    },
+    {
+      "name": "Washington Post",
+      "bias": "lean left"
+    }
+  ]
+}
