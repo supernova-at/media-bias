@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import { DropTarget } from 'react-dnd';
 
 // Local.
-import Outlet from './outlet';
+import Outlet from '../outlet';
 
 /*
  * Members.

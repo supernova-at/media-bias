@@ -9,43 +9,20 @@ import { findDOMNode } from 'react-dom';
 import { DragSource } from 'react-dnd';
 
 // Local.
+import './outlet.css';
 import newsImage from '../images/generic-news.png';
-
-/*
- * Members.
- */
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-
-    width: '5vw',
-    minWidth: '5vw',
-    height: '5vw',
-
-    border: 'solid 1px white',
-  },
-  image: {
-    width: '100%',
-  },
-  name: {
-    fontWeight: 'bold',
-  },
-};
 
 /*
  * The Outlet class.
  */
 class Outlet extends Component {
   render() {
-    const { name } = this.props;
-    const mergedStyles = Object.assign({}, styles.container, this.props.style);
+    const { name, style } = this.props;
+
     return (
-      <div style={mergedStyles}>
-        <img style={styles.image} src={newsImage} alt="news" />
-        <span style={styles.name}>{name}</span>
+      <div className="outlet" style={style}>
+        <img src={newsImage} alt="news" />
+        <span>{name}</span>
       </div>
     );
   }
@@ -55,6 +32,7 @@ Outlet.displayName = 'Outlet';
 
 Outlet.propTypes = {
   name: PropTypes.string.isRequired,
+  style: PropTypes.object,
 };
 
 export default Outlet;

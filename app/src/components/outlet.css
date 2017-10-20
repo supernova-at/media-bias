@@ -1,0 +1,16 @@
+.outlet {
+  min-height: 125px;
+
+  /* Vertically stack the image and text. */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.outlet img {
+  width: 100px;
+}
+.outlet span {
+  width: 100%;
+  text-align: center;
+}

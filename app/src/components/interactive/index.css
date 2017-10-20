@@ -1,0 +1,36 @@
+.interactive {
+  /* Take up the whole page. */
+  height: 100%;
+  width: 100%;
+
+  /* Display the outlets and the drop zones side by side. */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.outlets-container {
+  /* Take up the full height of a page and cut off overflows. */
+  height: 100%;
+  overflow: hidden;
+}
+.outlets-title {
+  text-align: center;
+}
+.outlets-bucket {
+  /* Vertically constrain the items. */
+  height: 83%;
+  overflow-y: auto;
+
+  /* Space out the individual outlets. */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: white;
+  border: inset 1px slategray;
+
+  padding: 0 5px;
+}
