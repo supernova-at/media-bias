@@ -5,8 +5,9 @@
       "bias": "lean left"
     },
     {
-      "name": "Associated Press",
-      "bias": "center"
+      "name": "Associated Press (AP)",
+      "bias": "center",
+      "interactive": "true"
     },
     {
       "name": "BBC News",
@@ -18,7 +19,8 @@
     },
     {
       "name": "Buzzfeed",
-      "bias": "lean left"
+      "bias": "lean left",
+      "interactive": "true"
     },
     {
       "name": "C-SPAN",
@@ -46,11 +48,13 @@
     },
     {
       "name": "Fox News",
-      "bias": "right"
+      "bias": "right",
+      "interactive": "true"
     },
     {
       "name": "Huffington Post",
-      "bias": "left"
+      "bias": "left",
+      "interactive": "true"
     },
     {
       "name": "InfoWars",
@@ -58,7 +62,8 @@
     },
     {
       "name": "MSNBC",
-      "bias": "left"
+      "bias": "left",
+      "interactive": "true"
     },
     {
       "name": "NBC News",
@@ -66,7 +71,8 @@
     },
     {
       "name": "New York Times",
-      "bias": "lean left"
+      "bias": "lean left",
+      "interactive": "true"
     },
     {
       "name": "Newsweek",
@@ -74,7 +80,8 @@
     },
     {
       "name": "NPR",
-      "bias": "center"
+      "bias": "center",
+      "interactive": "true"
     },
     {
       "name": "Politico",
@@ -106,11 +113,13 @@
     },
     {
       "name": "Wall Street Journal",
-      "bias": "center"
+      "bias": "center",
+      "interactive": "true"
     },
     {
       "name": "Washington Post",
-      "bias": "lean left"
+      "bias": "lean left",
+      "interactive": "true"
     }
   ]
 }

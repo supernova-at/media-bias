@@ -18,7 +18,10 @@ import { DraggableOutlet } from '../outlet';
  * The grouping from which to drag Outlets.
  */
 const OutletBucket = () => {
+  const isInteractive = el => el.interactive === 'true';
+
   const outlets = bias
+    .filter(isInteractive)
     .shuffle()
     .map((definition, index) => (
       <DraggableOutlet name={definition.name} key={index} />
