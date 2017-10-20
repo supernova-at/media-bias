@@ -23,3 +23,8 @@ as of September 12, 2017.
   * No such thing as unbiased (example)
   * Acknowledge your bias
   * Vary your media diet
+  * Primary sources are always the best
+    * Make up your own mind first
+
+
+1. Media Queries (http://www.websitedimensions.com/)

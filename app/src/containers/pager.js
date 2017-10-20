@@ -5,25 +5,38 @@
 // NPM.
 import React, { Component } from 'react';
 
-// Local.
-import Page from '../components/page';
+/*
+ * Members.
+ */
+const styles = {
+  container: {
+    margin: '0 auto',
+    width: '80vw',
+    height: '99vh',
+    backgroundColor: 'rgba(255, 192, 203, 0.25)',
+    border: 'solid 1px black',
+  },
+};
 
 /**
  * The Pager displays the current page.
  */
 class Pager extends Component {
   render () {
-    const currentPage = React.Children.toArray(this.props.children)[this.state.page];
-    const displayPageNumber = this.state.page + 1;
-    const displayPagesTotal = this._numPages + 1;
+    // Note: this.state.page is 1-based, so we subtract 1 for index into the array.
+    const currentPage = React.Children.toArray(this.props.children)[this.state.page - 1];
 
     return (
-      <div>
-        { currentPage }
-        <hr />
-        <button onClick={this.previousPage}>Previous</button>
-        <span>Page: {displayPageNumber} of {displayPagesTotal}</span>
-        <button onClick={this.nextPage}>Next</button>
+      <div className="pager">
+        <div className="page">
+          { currentPage }
+        </div>
+        <PagerFooter
+          fnPrevious={this.previousPage}
+          fnNext={this.nextPage}
+          currentPage={this.state.page}
+          totalPages={this._numPages}
+          />
       </div>
     );
   }
@@ -32,11 +45,11 @@ class Pager extends Component {
     super(...args);
 
     // Private member variables.
-    this._numPages = React.Children.count(this.props.children) - 1;
+    this._numPages = React.Children.count(this.props.children);
 
     // Initialize state.
     this.state = {
-      page: 0,
+      page: 1,
     };
 
     // Bind class functions.
@@ -48,7 +61,7 @@ class Pager extends Component {
    * Event Handlers.
    */
   previousPage () {
-    if (this.state.page > 0) {
+    if (this.state.page > 1) {
       this.setState({ page: (this.state.page - 1) });
     }
   }
@@ -60,5 +73,22 @@ class Pager extends Component {
 };
 
 Pager.displayName = 'Pager';
+
+/**
+ * Renders the progress indicator at the bottom of the Pager.
+ * @param {Function} fnPrevious   - Go back.
+ * @param {Function} fnNext       - Go forward.
+ * @param {Number} currentPage    - The current page (1-based).
+ * @param {Number} totalPages     - The total number of pages.
+ */
+const PagerFooter = ({ fnPrevious, fnNext, currentPage, totalPages }) => {
+  return (
+    <div className="page-footer">
+      <button onClick={fnPrevious}>Previous</button>
+      <span>Page: {currentPage} of {totalPages}</span>
+      <button onClick={fnNext}>Next</button>
+    </div>
+  );
+};
 
 export default Pager;
