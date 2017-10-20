@@ -6,17 +6,12 @@
 import React, { Component } from 'react';
 
 // Local.
+import WelcomeContents from '../components/welcome';
 
 /*
  * The Welcome class.
  */
-class Welcome extends Component {
-  render () {
-    return (
-      <span>Welcome to the Media Bias experience</span>
-    );
-  }
-};
+const Welcome = () => <WelcomeContents />;
 
 Welcome.displayName = 'Welcome';
 

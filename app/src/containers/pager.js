@@ -5,19 +5,6 @@
 // NPM.
 import React, { Component } from 'react';
 
-/*
- * Members.
- */
-const styles = {
-  container: {
-    margin: '0 auto',
-    width: '80vw',
-    height: '99vh',
-    backgroundColor: 'rgba(255, 192, 203, 0.25)',
-    border: 'solid 1px black',
-  },
-};
-
 /**
  * The Pager displays the current page.
  */
@@ -44,13 +31,13 @@ class Pager extends Component {
   constructor (...args) {
     super(...args);
 
-    // Private member variables.
-    this._numPages = React.Children.count(this.props.children);
-
     // Initialize state.
     this.state = {
       page: 1,
     };
+
+    // Private member variables.
+    this._numPages = React.Children.count(this.props.children);
 
     // Bind class functions.
     this.previousPage = this.previousPage.bind(this);

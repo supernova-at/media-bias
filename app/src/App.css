@@ -36,6 +36,9 @@
   /* TODO: replace this with actual px value if desired. */
   height: 92%;
 
+  /* Give the pages some breathing room. */
+  margin: 5px;
+
   /* Horizontally and Vertically center the page contents. */
   display: flex;
   flex-direction: row;
@@ -48,4 +51,18 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+/*
+ * Set font-family document-wide.
+ * See https://fonts.google.com/specimen/Iceland?selection.family=Coda|Iceland.
+ */
+body {
+  font-family: 'Iceland', cursive;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Coda', cursive;
+}
+p, span {
+  font-size: 1.5em;
 }
