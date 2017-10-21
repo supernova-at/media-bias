@@ -13,8 +13,8 @@
   /* Center in the viewport horizontally. */
   margin: auto;
 
-  /* For ease of use. TODO: improve */
-  border: solid 1px black;
+  background-color: #e9e8df;
+  box-shadow: 0px 0px 7px 5px #bebcb0;
 }
 .page {
   /* No matter the contents of this div, we want the height to be constant. */

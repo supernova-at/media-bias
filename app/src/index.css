@@ -1,3 +1,7 @@
+body {
+  background-color: #e9e8df;
+}
+
 /* Horizontally and vertically center the content in the window. */
 #root {
   /* Take up the entire screen. */
@@ -12,4 +16,10 @@
 
   /* Always stay in the same place. */
   position: fixed;
+
+  /* The newspaper background image. */
+  background-image: url("images/news.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
