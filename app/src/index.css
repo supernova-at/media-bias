@@ -1,0 +1,15 @@
+/* Horizontally and vertically center the content in the window. */
+#root {
+  /* Take up the entire screen. */
+  width: 100vw;
+  height: 100vh;
+
+  /* Horizontally and vertically center the content. */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  /* Always stay in the same place. */
+  position: fixed;
+}

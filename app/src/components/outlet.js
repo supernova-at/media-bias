@@ -10,7 +10,7 @@ import { DragSource } from 'react-dnd';
 
 // Local.
 import './outlet.css';
-import newsImage from '../images/generic-news.png';
+import newsImage from '../images/news.png';
 
 /*
  * The Outlet class.

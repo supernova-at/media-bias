@@ -1,3 +1,6 @@
+/*
+ * The Interactive Page.
+ */
 .interactive {
   /* Take up the whole page. */
   height: 100%;
@@ -10,7 +13,12 @@
   align-items: center;
 }
 
+/*
+ * Outlets.
+ */
 .outlets-container {
+  width: 200px;
+
   /* Take up the full height of a page and cut off overflows. */
   height: 100%;
   overflow: hidden;
@@ -32,5 +40,32 @@
   background-color: white;
   border: inset 1px slategray;
 
-  padding: 0 5px;
+  padding: 5px;
+}
+
+/*
+ * Drop Zones.
+ */
+.drop-zones {
+  width: 800px;
+  height: 100%;
+
+  /* Display the drop zones in a row. */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.drop-zone-container {
+  width: 200px;
+  height: 100%;
+
+  /* Stack the title on top of the droppable zone area. */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.drop-zone-container h3 {
+  text-transform: capitalize;
 }

@@ -1,5 +1,6 @@
 .outlet {
   min-height: 125px;
+  margin: 5px 0;
 
   /* Vertically stack the image and text. */
   display: flex;

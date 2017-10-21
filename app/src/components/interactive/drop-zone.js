@@ -64,11 +64,11 @@ function collect(connect, monitor) {
  */
 class DropZone extends Component {
   render () {
-    // Your component receives its own props as usual
+    // The component receives its own props as usual.
     const { title } = this.props;
 
     // These props are injected by React DnD,
-    // as defined by your `collect` function above:
+    // as defined by the `collect` function above:
     const { connectDropTarget, isOver, canDrop } = this.props;
 
     let color;
@@ -80,9 +80,9 @@ class DropZone extends Component {
     const mergedStyles = Object.assign({}, styles.dropTarget, stateStyle);
 
     return connectDropTarget(
-      <div style={styles.container}>
-        <span style={styles.title}>{title}</span>
-        <div style={mergedStyles}>
+      <div className="drop-zone-container">
+        <h3>{title}</h3>
+        <div className="drop-zone" style={mergedStyles}>
         </div>
       </div>
     );

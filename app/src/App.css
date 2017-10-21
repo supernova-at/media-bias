@@ -1,18 +1,3 @@
-/* Horizontally and vertically center the content in the window. */
-#root {
-  /* Take up the entire screen. */
-  width: 100vw;
-  height: 100vh;
-
-  /* Horizontally and vertically center the content. */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  /* Always stay in the same place. */
-  position: fixed;
-}
 .pager {
   /* 85% of worldwide desktop traffic will see these dimensions. */
   /* width: 1366px;
@@ -20,10 +5,10 @@
   height: 768px;
   min-height: 768px; */
   /* Test dimensions */
-  width: 800px;
-  min-width: 800px;
-  height: 450px;
-  min-height: 450px;
+  width: 1024px;
+  min-width: 1024px;
+  height: 576px;
+  min-height: 576px;
 
   /* Center in the viewport horizontally. */
   margin: auto;

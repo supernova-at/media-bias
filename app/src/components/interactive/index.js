@@ -9,8 +9,7 @@ import React from 'react';
 import './index.css';
 
 import OutletBucket from './outlet-bucket';
-import { DraggableOutlet } from '../outlet';
-import DropZone from './drop-zone';
+import DropZones from './drop-zones';
 
 /*
  * The Interactive Component.
@@ -18,11 +17,7 @@ import DropZone from './drop-zone';
 const Interactive = () => (
   <div className="interactive">
     <OutletBucket />
-    <div>
-      <DropZone title="left" />
-      <DropZone title="center" />
-      <DropZone title="right" />
-    </div>
+    <DropZones />
   </div>
 );
 
