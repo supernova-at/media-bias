@@ -5,6 +5,7 @@
 // NPM.
 import React, { Component } from 'react';
 import { DropTarget } from 'react-dnd';
+import classNames from 'classnames';
 
 // Local.
 import Outlet from '../outlet';
@@ -13,25 +14,6 @@ import Outlet from '../outlet';
  * Members.
  * @see http://react-dnd.github.io/react-dnd/docs-drop-target.html.
  */
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-
-    height: '100%',
-    width: '5vw',
-  },
-  title: {
-    textTransform: 'capitalize',
-  },
-  dropTarget: {
-    width: '100%',
-    height: '100%',
-  },
-}
-
 const spec = {
   canDrop (props, monitor) {
     // As long as the item type matches, allow drop.
@@ -71,18 +53,15 @@ class DropZone extends Component {
     // as defined by the `collect` function above:
     const { connectDropTarget, isOver, canDrop } = this.props;
 
-    let color;
-    if (isOver && canDrop) { color = 'green'; }
-    else if (!isOver && canDrop) { color = 'yellow'; }
-    else if (isOver && !canDrop) { color = 'red'; }
-
-    const stateStyle = { backgroundColor: color };
-    const mergedStyles = Object.assign({}, styles.dropTarget, stateStyle);
+    const zoneClass = classNames('drop-zone', {
+      'drop-over': isOver && canDrop,
+      'drop-available': !isOver && canDrop,
+    });
 
     return connectDropTarget(
       <div className="drop-zone-container">
         <h3>{title}</h3>
-        <div className="drop-zone" style={mergedStyles}>
+        <div className={zoneClass}>
         </div>
       </div>
     );

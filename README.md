@@ -25,6 +25,6 @@ as of September 12, 2017.
   * Vary your media diet
   * Primary sources are always the best
     * Make up your own mind first
-
+  * Real headlines don't need exclamation points
 
 1. Media Queries (http://www.websitedimensions.com/)
