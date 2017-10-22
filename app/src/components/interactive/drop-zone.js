@@ -20,14 +20,9 @@ const spec = {
     return true;
   },
   drop (props, monitor, component) {
-    // Obtain the dragged item
-    const item = monitor.getItem();
-
-    // TODO: Do something with it.
-
-    // And return an object that will be available as monitor.getDropResult()
+    // Return an object that will be available as monitor.getDropResult()
     // in the drag source's endDrag() method.
-    return {};
+    return { destination: props.title };
   }
 };
 
@@ -62,6 +57,7 @@ class DropZone extends Component {
       <div className="drop-zone-container">
         <h3>{title}</h3>
         <div className={zoneClass}>
+          { this.props.outlets }
         </div>
       </div>
     );

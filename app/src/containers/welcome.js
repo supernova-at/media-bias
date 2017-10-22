@@ -3,7 +3,7 @@
  */
 
 // NPM.
-import React, { Component } from 'react';
+import React from 'react';
 
 // Local.
 import WelcomeContents from '../components/welcome';
