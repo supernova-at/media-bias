@@ -52,7 +52,7 @@ const entrySource = {
     const dropResult = monitor.getDropResult();
 
     if (dropResult) {
-      console.log('Successful drop!');
+      props.onDragEnd(item.name, dropResult.destination);
     }
   }
 };

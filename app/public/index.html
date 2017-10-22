@@ -26,6 +26,29 @@
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <script>
+      /*
+       * Fisher-Yates shuffling algorithm.
+       * @see https://gist.github.com/cacheflow/bf6b8d4e96dab6e79847.
+       */
+      window.shuffle = function(array) {
+        var i = array.length, randomNum, randomNumIndex;
+
+        // Start from the end of the array and...
+        while(--i > 0) {
+          // Select a random item from the 'front' of the array.
+          randomNum = Math.floor(Math.random() * (i + 1));
+          randomNumIndex = array[randomNum];
+
+          // And swap it with the 'end' index (i).
+          array[randomNum] = array[i];
+          array[i] = randomNumIndex;
+        }
+
+        return array;
+      };
+    </script>
+    
     <div id="root"></div>
     <!--
       This HTML file is a template.
