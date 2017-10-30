@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { findDOMNode } from 'react-dom';
 import { DragSource } from 'react-dnd';
+import classnames from 'classnames';
 
 // Local.
 import './outlet.css';
@@ -17,10 +18,14 @@ import newsImage from '../images/news.png';
  */
 class Outlet extends Component {
   render() {
-    const { name, style } = this.props;
+    const { isDragging, name } = this.props;
+
+    const outletClass = classnames('outlet', {
+      'isDragging': isDragging,
+    });
 
     return (
-      <div className="outlet" style={style}>
+      <div className={outletClass}>
         <img src={newsImage} alt="news" />
         <span>{name}</span>
       </div>
@@ -31,8 +36,8 @@ class Outlet extends Component {
 Outlet.displayName = 'Outlet';
 
 Outlet.propTypes = {
+  isDragging: PropTypes.bool,
   name: PropTypes.string.isRequired,
-  style: PropTypes.object,
 };
 
 export default Outlet;
@@ -66,15 +71,11 @@ function collect(connect, monitor) {
 class DragReadyOutlet extends Component {
   render() {
     const { connectDragSource, isDragging } = this.props;
-    const styles = {
-      cursor: 'pointer',
-      opacity: (isDragging) ? 0.4 : 1,
-    };
 
     return (
       <Outlet {...this.props}
-        style={styles}
-        ref={instance => connectDragSource(findDOMNode(instance))}
+        isDragging={isDragging}
+        ref={instance => connectDragSource(findDOMNode(instance), { dropEffect: 'copy' })}
       />
     );
   }
