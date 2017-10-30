@@ -12,6 +12,7 @@ import classnames from 'classnames';
 // Local.
 import './outlet.css';
 import newsImage from '../images/news.png';
+import checkImage from '../images/icons8-ok.png';
 
 /*
  * The Outlet class.
@@ -86,3 +87,37 @@ export const DraggableOutlet = DragSource(
   entrySource,
   collect
 )(DragReadyOutlet);
+
+/*
+ * The SelectableOutlet Class.
+ */
+class SelectableOutlet extends Component {
+  render () {
+    return (
+      <div className="selectable-outlet" onClick={this.toggleSelect}>
+        { this.state.selected && (
+          <div className="selected-outlet">
+            <img src={checkImage} alt="news" />
+          </div>
+        )}
+        <Outlet {...this.props} />
+      </div>
+    );
+  }
+
+  constructor (...args) {
+    super(...args);
+
+    // Initialize state.
+    this.state = { selected: false };
+
+    // Bind functions.
+    this.toggleSelect = this.toggleSelect.bind(this);
+  }
+
+  toggleSelect = () => {
+    this.setState({ selected: !this.state.selected });
+  }
+};
+
+export { SelectableOutlet };

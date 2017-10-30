@@ -12,6 +12,8 @@ class Pager extends Component {
   render () {
     // Note: this.state.page is 1-based, so we subtract 1 for index into the array.
     const currentPage = React.Children.toArray(this.props.children)[this.state.page - 1];
+    const hasNextPage = this.state.page < this._numPages;
+    const nextPageNumber = this.state.page + 1;
 
     return (
       <div className="pager">
@@ -19,11 +21,10 @@ class Pager extends Component {
           { currentPage }
         </div>
         <PagerFooter
-          fnPrevious={this.previousPage}
+          hasNextPage={hasNextPage}
           fnNext={this.nextPage}
-          currentPage={this.state.page}
-          totalPages={this._numPages}
-          />
+          nextPageNumber={nextPageNumber}>
+        </PagerFooter>
       </div>
     );
   }
@@ -40,18 +41,12 @@ class Pager extends Component {
     this._numPages = React.Children.count(this.props.children);
 
     // Bind class functions.
-    this.previousPage = this.previousPage.bind(this);
     this.nextPage = this.nextPage.bind(this);
   }
 
   /*
    * Event Handlers.
    */
-  previousPage () {
-    if (this.state.page > 1) {
-      this.setState({ page: (this.state.page - 1) });
-    }
-  }
   nextPage () {
     if (this.state.page < this._numPages) {
       this.setState({ page: (this.state.page + 1) });
@@ -63,17 +58,16 @@ Pager.displayName = 'Pager';
 
 /**
  * Renders the progress indicator at the bottom of the Pager.
- * @param {Function} fnPrevious   - Go back.
+ * @param {Boolean} hasNextPage   - Whether or not there is a next page.
  * @param {Function} fnNext       - Go forward.
- * @param {Number} currentPage    - The current page (1-based).
- * @param {Number} totalPages     - The total number of pages.
+ * @param {Number} nextPageNumber - The number of the next page.
  */
-const PagerFooter = ({ fnPrevious, fnNext, currentPage, totalPages }) => {
+const PagerFooter = ({ hasNextPage, fnNext, nextPageNumber }) => {
   return (
     <div className="page-footer">
-      <button onClick={fnPrevious}>Previous</button>
-      <span>Page: {currentPage} of {totalPages}</span>
-      <button onClick={fnNext}>Next</button>
+      { hasNextPage && (
+        <button onClick={fnNext}>Continued on Page {nextPageNumber}</button>
+      )}
     </div>
   );
 };

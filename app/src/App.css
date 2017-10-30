@@ -1,10 +1,5 @@
 .pager {
-  /* 85% of worldwide desktop traffic will see these dimensions. */
-  /* width: 1366px;
-  min-width: 1366px;
-  height: 768px;
-  min-height: 768px; */
-  /* Test dimensions */
+  /* >85% of worldwide desktop traffic will see these dimensions. */
   width: 1024px;
   min-width: 1024px;
   height: 576px;
@@ -31,11 +26,28 @@
   align-items: center;
 }
 .page-footer {
-  /* Horizontally distribute the contents of this div. */
+  /* Right-align the contents of this div. */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+
+  padding: 0 10px;
+}
+.page-footer button {
+  /* Make the next and previous buttons look like they're in a newspaper. */
+
+  /* Remove default button styles. */
+  background: none;
+  border: none;
+  padding: 0;
+  outline-width: 0;
+
+  /* And add text styles. */
+  text-transform: uppercase;
+  font-family: 'Coda, cursive';
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 /*
@@ -44,8 +56,9 @@
  */
 body {
   font-family: 'Iceland', cursive;
+  color: #333;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, small {
   font-family: 'Coda', cursive;
 }
 p, span {

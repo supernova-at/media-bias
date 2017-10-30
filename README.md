@@ -17,9 +17,11 @@ as of September 12, 2017.
 
 ## TODO: Plans
 
+1. Prompt for current sources. Score (center is best, extremes don't cancel each other)
 1. Interactive Drag & Drop outlets to bias
-2. Show & Compare to actual data
-3. Learn:
+1. Show & Compare to actual data
+1. Highlight user's current sources. Show score. Suggest other sources.
+1. Learn:
   * No such thing as unbiased (example)
   * Acknowledge your bias
   * Vary your media diet

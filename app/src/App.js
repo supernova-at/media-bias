@@ -13,6 +13,7 @@ import Pager from './containers/pager';
 
 // The pages.
 import Welcome from './containers/welcome';
+import CurrentDiet from './containers/current-diet';
 import InteractiveTutorial from './components/interactive-tutorial';
 import Interactive from './components/interactive';
 
@@ -24,6 +25,7 @@ class App extends Component {
     return (
       <Pager>
         <Welcome />
+        <CurrentDiet />
         <InteractiveTutorial />
         <Interactive />
       </Pager>
