@@ -116,8 +116,13 @@ class SelectableOutlet extends Component {
   }
 
   toggleSelect = () => {
-    this.setState({ selected: !this.state.selected });
+    const { name, onClick } = this.props;
+    this.setState({ selected: !this.state.selected }, () => onClick(name));
   }
 };
+
+SelectableOutlet.propTypes = {
+  onClick: PropTypes.func.isRequired,
+}
 
 export { SelectableOutlet };
