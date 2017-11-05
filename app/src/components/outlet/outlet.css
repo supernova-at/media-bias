@@ -50,8 +50,8 @@
 
 /* SelectedOutlet styles. */
 .selectable-outlet {
+  cursor: pointer;
   position: relative;
-
 }
 .selected-outlet {
   height: 100%;

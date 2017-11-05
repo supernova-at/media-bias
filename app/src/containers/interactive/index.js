@@ -11,10 +11,10 @@ import './index.css';
 // Components.
 import OutletBucket from './outlet-bucket';
 import DropZone from './drop-zone';
-import Outlet, { DraggableOutlet } from '../outlet';
+import Outlet, { DraggableOutlet } from '../../components/outlet';
 // Data.
 import { sources as bias } from '../../data/bias.json';
-import { Zones } from './consts';
+import { Zones } from './zones';
 
 /*
  * The Interactive Component.

@@ -11,8 +11,8 @@ import classnames from 'classnames';
 
 // Local.
 import './outlet.css';
-import newsImage from '../images/news.png';
-import checkImage from '../images/icons8-ok.png';
+import newsImage from '../../images/news.png';
+import checkImage from '../../images/icons8-ok.png';
 
 /*
  * The Outlet class.
@@ -116,8 +116,13 @@ class SelectableOutlet extends Component {
   }
 
   toggleSelect = () => {
-    this.setState({ selected: !this.state.selected });
+    const { name, onClick } = this.props;
+    this.setState({ selected: !this.state.selected }, () => onClick(name));
   }
 };
+
+SelectableOutlet.propTypes = {
+  onClick: PropTypes.func.isRequired,
+}
 
 export { SelectableOutlet };

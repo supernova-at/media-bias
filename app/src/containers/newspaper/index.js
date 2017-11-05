@@ -9,6 +9,10 @@ import PropTypes from 'prop-types';
 // Local.
 import './newspaper.css';
 
+/*
+ * The Newspaper Class distributes its children evenly across the
+ * desired number of columns.
+ */
 class Newspaper extends Component {
   render () {
     const { children, columnCount, heading, subhead } = this.props;

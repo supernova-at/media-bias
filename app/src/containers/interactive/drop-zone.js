@@ -8,7 +8,7 @@ import { DropTarget } from 'react-dnd';
 import classNames from 'classnames';
 
 // Local.
-import Outlet from '../outlet';
+import Outlet from '../../components/outlet';
 
 /*
  * Members.
