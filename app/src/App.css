@@ -35,7 +35,7 @@
   padding: 0 10px;
 }
 .page-footer button {
-  /* Make the next and previous buttons look like they're in a newspaper. */
+  cursor: pointer;
 
   /* Remove default button styles. */
   background: none;
@@ -43,7 +43,7 @@
   padding: 0;
   outline-width: 0;
 
-  /* And add text styles. */
+  /* And add text styles to make the buttons look like they're in a newspaper. */
   text-transform: uppercase;
   font-family: 'Coda, cursive';
   font-weight: bold;
