@@ -30,3 +30,9 @@ as of September 12, 2017.
   * Real headlines don't need exclamation points
 
 1. Media Queries (http://www.websitedimensions.com/)
+
+## TODO: Tasks
+
+1. Get icons for each outlet
+1. Allow newspaper to lay things out alphabetically horizontally
+1. Rate & suggestion algorithm for selected biases

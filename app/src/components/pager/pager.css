@@ -1,0 +1,51 @@
+.pager {
+  /* >85% of worldwide desktop traffic will see these dimensions. */
+  width: 1024px;
+  min-width: 1024px;
+  height: 576px;
+  min-height: 576px;
+
+  /* Center in the viewport horizontally. */
+  margin: auto;
+
+  background-color: #e9e8df;
+  box-shadow: 0px 0px 7px 5px #bebcb0;
+}
+.page {
+  /* No matter the contents of this div, we want the height to be constant. */
+  /* TODO: replace this with actual px value if desired. */
+  height: 92%;
+
+  /* Give the pages some breathing room. */
+  margin: 5px;
+
+  /* Horizontally and Vertically center the page contents. */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.page-footer {
+  /* Right-align the contents of this div. */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 10px;
+}
+.page-footer button {
+  cursor: pointer;
+
+  /* Remove default button styles. */
+  background: none;
+  border: none;
+  padding: 0;
+  outline-width: 0;
+
+  /* And add text styles to make the buttons look like they're in a newspaper. */
+  text-transform: uppercase;
+  font-family: 'Coda, cursive';
+  font-weight: bold;
+  font-size: 1.1em;
+}

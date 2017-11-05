@@ -5,6 +5,9 @@
 // NPM.
 import React, { Component } from 'react';
 
+// Local.
+import './pager.css';
+
 /**
  * The Pager displays the current page.
  */

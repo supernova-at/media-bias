@@ -11,8 +11,8 @@ import classnames from 'classnames';
 
 // Local.
 import './outlet.css';
-import newsImage from '../images/news.png';
-import checkImage from '../images/icons8-ok.png';
+import newsImage from '../../images/news.png';
+import checkImage from '../../images/icons8-ok.png';
 
 /*
  * The Outlet class.

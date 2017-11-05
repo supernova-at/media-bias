@@ -10,15 +10,15 @@ import PropTypes from 'prop-types';
 // Styles.
 import './current-diet.css';
 // Components.
-import Newspaper from '../../containers/newspaper';
-import { SelectableOutlet } from '../outlet';
+import Newspaper from '../newspaper';
+import { SelectableOutlet } from '../../components/outlet';
 // Data.
 import { sources } from '../../data/bias.json';
 
 /*
  * The entry point for the CurrentDiet page.
  */
-class CurrentDietContents extends Component {
+class CurrentDiet extends Component {
   render () {
     const headCopy = 'What is your current media diet?';
     const subheadCopy = 'Select all that apply';
@@ -42,10 +42,10 @@ class CurrentDietContents extends Component {
   }
 };
 
-CurrentDietContents.displayName = 'CurrentDietContents';
+CurrentDiet.displayName = 'CurrentDiet';
 
-CurrentDietContents.contextTypes = {
+CurrentDiet.contextTypes = {
   toggleOutletInDiet: PropTypes.func,
 };
 
-export default CurrentDietContents;
+export default CurrentDiet;

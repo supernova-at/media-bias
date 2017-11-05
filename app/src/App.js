@@ -10,13 +10,13 @@ import HTML5Backend from 'react-dnd-html5-backend';
 
 // Local.
 import './App.css';
-import Pager from './containers/pager';
+import Pager from './components/pager';
 
 // The pages.
 import Welcome from './containers/welcome';
 import CurrentDiet from './containers/current-diet';
-import InteractiveTutorial from './components/interactive-tutorial';
-import Interactive from './components/interactive';
+import InteractiveTutorial from './containers/interactive-tutorial';
+import Interactive from './containers/interactive';
 
 /**
  * The Application root.
