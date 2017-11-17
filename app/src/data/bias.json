@@ -6,8 +6,7 @@
     },
     {
       "name": "Associated Press (AP)",
-      "bias": "center",
-      "interactive": "true"
+      "bias": "center"
     },
     {
       "name": "BBC News",
@@ -18,7 +17,7 @@
       "bias": "right"
     },
     {
-      "name": "Buzzfeed",
+      "name": "Buzzfeed News",
       "bias": "lean left",
       "interactive": "true"
     },
@@ -88,8 +87,13 @@
       "bias": "center"
     },
     {
+      "name": "Reason",
+      "bias": "lean right"
+    },
+    {
       "name": "Reuters",
-      "bias": "center"
+      "bias": "center",
+      "interactive": "true"
     },
     {
       "name": "Teen Vogue",

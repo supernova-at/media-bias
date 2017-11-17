@@ -15,6 +15,7 @@ import Pager from './components/pager';
 // The pages.
 import Welcome from './containers/welcome';
 import CurrentDiet from './containers/current-diet';
+import RecommendedDiet from './containers/recommended-diet';
 import InteractiveTutorial from './containers/interactive-tutorial';
 import Interactive from './containers/interactive';
 
@@ -27,6 +28,7 @@ class App extends Component {
       <Pager>
         <Welcome />
         <CurrentDiet />
+        <RecommendedDiet />
         <InteractiveTutorial />
         <Interactive />
       </Pager>

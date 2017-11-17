@@ -14,7 +14,7 @@ import DropZone from './drop-zone';
 import Outlet, { DraggableOutlet } from '../../components/outlet';
 // Data.
 import { sources as bias } from '../../data/bias.json';
-import { Zones } from './zones';
+import { Zones } from '../../zones';
 
 /*
  * The Interactive Component.
