@@ -9,13 +9,19 @@ import PropTypes from 'prop-types';
 // Local.
 import './newspaper.css';
 
+// Members.
+export const Directions = {
+  Row: 0,
+  Column: 1,
+};
+
 /*
  * The Newspaper Class distributes its children evenly across the
  * desired number of columns.
  */
 class Newspaper extends Component {
   render () {
-    const { children, columnCount, heading, subhead } = this.props;
+    const { children, columnCount, direction, heading, subhead } = this.props;
 
     // Map of columnIndex -> children for that column.
     const columnsMap = {};
@@ -23,20 +29,39 @@ class Newspaper extends Component {
       columnsMap[index] = [];
     }
 
-    // Now loop over the children and distribute them evenly across the columns.
-    const childrenPerColumn = Math.ceil(React.Children.count(children) / columnCount);
-    React.Children.toArray(children)
-      .forEach((child, index) => {
-        let bucket;
-        for (let multiplier = 1; multiplier <= columnCount; multiplier++) {
-          const upperBound = childrenPerColumn * multiplier;
-          if (index < upperBound) {
-            bucket = multiplier - 1;
-            break;
-          }
+    /**
+     * Fills like this:
+     * 1 4 7
+     * 2 5 8
+     * 3 6 9
+     */
+    const columnFn = (child, index) => {
+      const childrenPerColumn = Math.ceil(React.Children.count(children) / columnCount);
+      let bucket;
+      for (let multiplier = 1; multiplier <= columnCount; multiplier++) {
+        const upperBound = childrenPerColumn * multiplier;
+        if (index < upperBound) {
+          bucket = multiplier - 1;
+          break;
         }
-        columnsMap[bucket].push(child);
-      });
+      }
+      columnsMap[bucket].push(child);
+    };
+
+    /**
+     * Fills like this:
+     * 1 2 3
+     * 4 5 6
+     * 7 8 9
+     */
+    const rowFn = (child, index) => {
+      const i = index % columnCount;
+      columnsMap[i].push(child);
+    };
+
+    // Now loop over the children and distribute them.
+    const distributeFn = (direction === Directions.Column) ? columnFn : rowFn;
+    React.Children.toArray(children).forEach(distributeFn);
 
     // Create the containers based on the columns object.
     const columns = Object.keys(columnsMap)
@@ -62,8 +87,13 @@ Newspaper.displayName = 'Newspaper';
 
 Newspaper.propTypes = {
   columnCount: PropTypes.number.isRequired,
+  direction: PropTypes.number,
   heading: PropTypes.string.isRequired,
   subhead: PropTypes.string,
+};
+
+Newspaper.defaultProps = {
+  direction: Directions.Column,
 };
 
 export default Newspaper;

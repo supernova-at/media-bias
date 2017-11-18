@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 // Styles.
 import './current-diet.css';
 // Components.
-import Newspaper from '../newspaper';
+import Newspaper, { Directions } from '../newspaper';
 import { SelectableOutlet } from '../../components/outlet';
 // Data.
 import { sources } from '../../data/bias.json';
@@ -35,7 +35,8 @@ class CurrentDiet extends Component {
       <Newspaper
         heading={headCopy}
         subhead={subheadCopy}
-        columnCount={7}>
+        columnCount={7}
+        direction={Directions.Row}>
         { outlets }
       </Newspaper>
     );
