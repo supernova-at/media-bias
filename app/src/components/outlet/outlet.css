@@ -67,4 +67,13 @@
 .selected-outlet img {
   height: 55px;
   width: 55px;
+
+  opacity: 0;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

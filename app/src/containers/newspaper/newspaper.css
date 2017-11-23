@@ -31,6 +31,8 @@
   align-items: flex-start;
 }
 .newspaper-column {
+  width: 100%;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-around;

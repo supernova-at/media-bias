@@ -7,6 +7,7 @@ import React, { Component } from 'react';
 
 // Local.
 import './pager.css';
+import arrowImage from '../../images/icons8-right-arrow.png';
 
 /**
  * The Pager displays the current page.
@@ -66,10 +67,17 @@ Pager.displayName = 'Pager';
  * @param {Number} nextPageNumber - The number of the next page.
  */
 const PagerFooter = ({ hasNextPage, fnNext, nextPageNumber }) => {
+  const isFirstPage = nextPageNumber === 2;
+
   return (
     <div className="page-footer">
       { hasNextPage && (
-        <button onClick={fnNext}>Continued on Page {nextPageNumber}</button>
+        <div className="page-footer-cta">
+          { isFirstPage && (
+            <img src={arrowImage} alt="arrow" />
+          )}
+          <button onClick={fnNext}>Continued on Page {nextPageNumber}</button>
+        </div>
       )}
     </div>
   );

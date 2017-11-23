@@ -18,6 +18,10 @@ import CurrentDiet from './containers/current-diet';
 import RecommendedDiet from './containers/recommended-diet';
 import InteractiveTutorial from './containers/interactive-tutorial';
 import Interactive from './containers/interactive';
+import NewsCopy from './containers/news-copy';
+
+// Data.
+import * as Copy from './data/news-copy';
 
 /**
  * The Application root.
@@ -28,9 +32,10 @@ class App extends Component {
       <Pager>
         <Welcome />
         <CurrentDiet />
-        <RecommendedDiet />
+        <NewsCopy source={Copy.Unbiased} />
         <InteractiveTutorial />
         <Interactive />
+        <RecommendedDiet />
       </Pager>
     );
   }

@@ -19,16 +19,17 @@ as of September 12, 2017.
 
 - [x] Prompt for current sources. Score (center is best, extremes don't cancel each other)
 - [x] Interactive Drag & Drop outlets to bias
+- [ ] Allow re-drag & drop
 - [ ] Show & Compare to actual data
+- [x] Animate CONTINUE call to action
+- [ ] The interactive tutorial (can just be an animated image)
 - [x] Highlight user's current sources. Show score. Suggest other sources.
-- [ ] Learn:
+- [x] Learn:
   - [ ] No such thing as unbiased (example)
-  - [ ] Acknowledge your bias
-  - [ ] Vary your media diet
   - [ ] Primary sources are always the best
-    - [ ] Make up your own mind first
-  - [ ] Real headlines don't need exclamation points
-- [ ] Get icons for each outlet
-- [ ] Allow newspaper to lay things out alphabetically horizontally
+  - [ ] Make up your own mind first
+  - [ ] Acknowledge your bias (and the source's bias)
+  - [ ] Vary your media diet
+- [x] Allow newspaper to lay things out alphabetically horizontally
 - [x] Rate & suggestion algorithm for selected biases
 - [ ] Media Queries (http://www.websitedimensions.com/)
