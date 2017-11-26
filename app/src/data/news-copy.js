@@ -1,3 +1,11 @@
+export const Welcome = {
+  copy: 'Welcome to the Media Bias experience.'
+};
+
+export const CurrentDietIntro = {
+  copy: `Let's identify your current information sources.`,
+};
+
 export const Introduction = {
   heading: `The big idea`,
   subheading: 'In this interactive experience you will learn how to:',
@@ -6,7 +14,7 @@ export const Introduction = {
     `Assess the bias of a media outlet and individual stories.`,
     `Combat your own bias.`,
   ],
-}
+};
 
 export const FakeVsBias = {
   heading: 'Fake News vs. Biased News',
@@ -28,6 +36,10 @@ export const FakeVsBias = {
 // Hyperpartisan news
 // Invented news
 
+export const InteractiveIntro = {
+  copy: `Let's play a game.`,
+};
+
 export const SeekingUnbiased = {
   heading: 'Unbiased News',
   subheading: 'Is it even possible?',
@@ -35,7 +47,6 @@ export const SeekingUnbiased = {
     'In an attempt to not be manipulated or swayed, we often seek unbiased news sources.',
     'While many news outlets strive for this ideal, bias is nearly impossible to avoid.',
     'Tone, focus, and personal experiences are a few ways unwanted biases can creep in to a story.',
-    'So what can we do instead?'
   ],
 };
 // It's unrealistic to expect that even the most conscientious journalist can
@@ -48,6 +59,10 @@ export const SeekingUnbiased = {
 // picture of what is going on in the world.
 // It arguably abdicates our responsibility for thinking for ourselves.
 
+export const UnbiasedAction = {
+  copy: 'So what can we do instead?',
+};
+
 export const IdentifyingMediaBias = {
   heading: 'Identifying Media Bias',
   subheading: 'How to identify bias in media',
@@ -57,7 +72,7 @@ export const IdentifyingMediaBias = {
     'Do they use loaded language, stereotypes, or double standards?',
     'Cross-check information against other media outlets. Are they the only one reporting this?',
   ],
-}
+};
 // Who are the sources?
 // What is the race and gender diversity at the news outlet you watch compared to the communities it serves?
 // From whose point of view is the news reported?
@@ -69,6 +84,10 @@ export const IdentifyingMediaBias = {
 // Look at where stories appear.
 // cross-check information.
 
+export const AnswersIntro = {
+  copy: `Let's examine how you rated outlets previously.`,
+};
+
 export const PersonalSteps = {
   heading: 'How to consume news',
   subheading: 'Steps you can take',
@@ -78,7 +97,7 @@ export const PersonalSteps = {
     `Think before sharing. If it sounds too good to be true, it probably is.`,
     `Attempt to discover alternate views of the same events.`
   ],
-}
+};
 // Read past the headline
 // Check what news outlet published it
 // Check the date and time of publish
@@ -99,7 +118,7 @@ export const FightPersonalBias = {
     'To combat your bias, interact positively with those you are biased against.',
     'Seek out a balanced media diet to gain a broader perspective.',
   ],
-}
+};
 // Be mindful of your initial gut feelings towards a story (bias)
 // Ask: why do I feel this way? Is this valid? Is it important / relevant?
 // Interact positively with those you are biased against to defeat your bias

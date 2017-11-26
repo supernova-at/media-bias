@@ -9,6 +9,11 @@ import React, { Component } from 'react';
 import './pager.css';
 import arrowImage from '../../images/icons8-right-arrow.png';
 
+/*
+ * Members.
+ */
+const previousDisabledPages = [3, 4, 8, 9];
+
 /**
  * The Pager displays the current page.
  */
@@ -16,7 +21,7 @@ class Pager extends Component {
   render () {
     // Note: this.state.page is 1-based, so we subtract 1 for index into the array.
     const currentPage = React.Children.toArray(this.props.children)[this.state.page - 1];
-    const hasPreviousPage = this.state.page > 1;
+    const hasPreviousPage = this.state.page > 1 && previousDisabledPages.indexOf(this.state.page) === -1;
     const hasNextPage = this.state.page < this._numPages;
 
     return (

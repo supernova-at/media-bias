@@ -13,7 +13,6 @@ import './App.css';
 import Pager from './components/pager';
 
 // The pages.
-import Welcome from './containers/welcome';
 import CurrentDiet from './containers/current-diet';
 import RecommendedDiet from './containers/recommended-diet';
 import InteractiveTutorial from './containers/interactive-tutorial';
@@ -31,18 +30,22 @@ class App extends Component {
   render () {
     return (
       <Pager>
-        <Welcome />
+        <NewsCopy source={Copy.Welcome} />
+        <NewsCopy source={Copy.CurrentDietIntro } />
         <CurrentDiet />
         <NewsCopy source={Copy.Introduction} />
         <NewsCopy source={Copy.FakeVsBias} />
+        <NewsCopy source={Copy.InteractiveIntro} />
         <InteractiveTutorial />
         <Interactive />
         <NewsCopy source={Copy.SeekingUnbiased} />
+        <NewsCopy source={Copy.UnbiasedAction} />
         <NewsCopy source={Copy.IdentifyingMediaBias} />
-        <NewsCopy source={Copy.PersonalSteps} />
+        <NewsCopy source={Copy.AnswersIntro} />
         <InteractiveAnswers />
-        <NewsCopy source={Copy.FightPersonalBias} />
+        <NewsCopy source={Copy.PersonalSteps} />
         <RecommendedDiet />
+        <NewsCopy source={Copy.FightPersonalBias} />
         <NewsCopy source={Copy.Patreon} />
         <NewsCopy source={Copy.Sources} />
       </Pager>
