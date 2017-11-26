@@ -13,6 +13,7 @@ import classnames from 'classnames';
 import './outlet.css';
 import newsImage from '../../images/news.png';
 import checkImage from '../../images/icons8-ok.png';
+import xImage from '../../images/icons8-x.png';
 
 /*
  * The Outlet class.
@@ -125,4 +126,36 @@ SelectableOutlet.propTypes = {
   onClick: PropTypes.func.isRequired,
 }
 
-export { SelectableOutlet };
+const CorrectAnswerOutlet = ({ name }) => (
+  <div className="answer-outlet">
+    <div className="answer-image-container">
+      <img className="answer-image" src={checkImage} alt="correct" />
+    </div>
+    <Outlet name={name} />
+  </div>
+);
+CorrectAnswerOutlet.displayName = 'CorrectAnswerOutlet';
+
+const IncorrectAnswerOutlet = ({ name }) => (
+  <div className="answer-outlet">
+    <div className="answer-image-container">
+      <img className="answer-image" src={xImage} alt="incorrect" />
+    </div>
+    <Outlet name={name} />
+  </div>
+);
+IncorrectAnswerOutlet.displayName = 'IncorrectAnswerOutlet';
+
+const ShowingCorrectAnswerOutlet = ({ name }) => (
+  <div className="show-correct-answer">
+    <Outlet name={name} />
+  </div>
+);
+ShowingCorrectAnswerOutlet.displayName = 'ShowingCorrectAnswerOutlet';
+
+export {
+  SelectableOutlet,
+  CorrectAnswerOutlet,
+  IncorrectAnswerOutlet,
+  ShowingCorrectAnswerOutlet
+};

@@ -21,12 +21,14 @@ import { Zones } from '../../zones';
  */
 class Interactive extends Component {
   render () {
-    const { bucket } = this.state;
-    const left = this.state[Zones.Left],
-          leanleft = this.state[Zones.LeanLeft],
-          center = this.state[Zones.Center],
-          leanright = this.state[Zones.LeanRight],
-          right = this.state[Zones.Right];
+    const {
+      bucket,
+      [Zones.Left]: left,
+      [Zones.LeanLeft]: leanleft,
+      [Zones.Center]: center,
+      [Zones.LeanRight]: leanright,
+      [Zones.Right]: right,
+    } = this.state;
 
     return (
       <div className="interactive">
@@ -47,6 +49,7 @@ class Interactive extends Component {
 
     // Bind class functions.
     this.moveOutlet = this.moveOutlet.bind(this);
+    this.saveStateToStore = this.saveStateToStore.bind(this);
 
     /*
      * Initialize State.
@@ -65,7 +68,7 @@ class Interactive extends Component {
         </DraggableOutlet>
       ));
 
-    this.state = {
+    this.state = window.interactive || {
       // The initial drag bucket.
       bucket: outlets,
       // The bias drop zones.
@@ -75,6 +78,8 @@ class Interactive extends Component {
       [Zones.LeanRight]: [],
       [Zones.Right]: []
     };
+
+    this.saveStateToStore();
   }
 
   /*
@@ -83,27 +88,61 @@ class Interactive extends Component {
   /**
    * Does the work of moving an outlet from the bucket to a bias zone.
    * @param  {String} outletName - The name of the outlet to move.
-   * @param  {String} zoneTitle  - The title of the bias zone to move it to.
+   * @param  {String} destination  - The key of the bias zone to move it to.
    */
-  moveOutlet (outletName, zoneTitle) {
-    // Remove from bucket.
-    const keepers = (el) => el.props.name !== outletName;
-    const updatedBucket = this.state.bucket
-      .filter(keepers);
+  moveOutlet (outletName, destination) {
+    const keepers = el => el.props.name !== outletName;
 
-    // Add to drop zone.
-    const targetZone = this.state[zoneTitle];
-    const updatedZone = targetZone.concat([
-      <Outlet
-        key={outletName}
-        name={outletName}>
-      </Outlet>
-    ]);
+    /**
+     * Adds a draggable outlet to a zone only if that zone is the destination.
+     * @param  {Array} zone   - The zone to examine.
+     * @param  {Array} value  - The zone's value after having been filtered.
+     * @return {Array} The updated value of this zone.
+     */
+    function conditionalAdd (zone, value) {
+      if (zone === this.state[destination]) {
+        const newOutlet = (
+          <DraggableOutlet
+            key={outletName}
+            name={outletName}
+            onDragEnd={this.moveOutlet}>
+          </DraggableOutlet>
+        );
+        value = value.concat([newOutlet]);
+      }
 
-    this.setState({
-      bucket: updatedBucket,
-      [zoneTitle]: updatedZone,
+      return value;
+    }
+
+
+    // Remove the outlet from whatever bucket its currently in and add it
+    // to its new home.
+    this.setState((prevState) => ({
+      bucket: prevState.bucket.filter(keepers), // don't ever add back to bucket.
+      [Zones.Left]: conditionalAdd.call(this, this.state[Zones.Left], prevState[Zones.Left].filter(keepers)),
+      [Zones.LeanLeft]: conditionalAdd.call(this, this.state[Zones.LeanLeft], prevState[Zones.LeanLeft].filter(keepers)),
+      [Zones.Center]: conditionalAdd.call(this, this.state[Zones.Center], prevState[Zones.Center].filter(keepers)),
+      [Zones.LeanRight]: conditionalAdd.call(this, this.state[Zones.LeanRight], prevState[Zones.LeanRight].filter(keepers)),
+      [Zones.Right]: conditionalAdd.call(this, this.state[Zones.Right], prevState[Zones.Right].filter(keepers)),
+    }), () => {
+      this.saveStateToStore();
     });
+  }
+
+  saveStateToStore () {
+    const removeDragFromOutlet = draggableOutlet => {
+      return (
+        <Outlet key={draggableOutlet.key} name={draggableOutlet.props.name} />
+      )
+    };
+    window.interactive = {
+      bucket: this.state.bucket.map(removeDragFromOutlet),
+      [Zones.Left]: this.state[Zones.Left].map(removeDragFromOutlet),
+      [Zones.LeanLeft]: this.state[Zones.LeanLeft].map(removeDragFromOutlet),
+      [Zones.Center]: this.state[Zones.Center].map(removeDragFromOutlet),
+      [Zones.LeanRight]: this.state[Zones.LeanRight].map(removeDragFromOutlet),
+      [Zones.Right]: this.state[Zones.Right].map(removeDragFromOutlet),
+    };
   }
 };
 

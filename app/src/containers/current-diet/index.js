@@ -20,7 +20,7 @@ import { sources } from '../../data/bias.json';
  */
 class CurrentDiet extends Component {
   render () {
-    const headCopy = 'What is your current media diet?';
+    const headCopy = 'Your current media diet';
     const subheadCopy = 'Select all that apply';
 
     let outlets = sources.map((definition, index) => (

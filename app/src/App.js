@@ -18,6 +18,7 @@ import CurrentDiet from './containers/current-diet';
 import RecommendedDiet from './containers/recommended-diet';
 import InteractiveTutorial from './containers/interactive-tutorial';
 import Interactive from './containers/interactive';
+import InteractiveAnswers from './containers/interactive/answers';
 import NewsCopy from './containers/news-copy';
 
 // Data.
@@ -32,10 +33,18 @@ class App extends Component {
       <Pager>
         <Welcome />
         <CurrentDiet />
-        <NewsCopy source={Copy.Unbiased} />
+        <NewsCopy source={Copy.Introduction} />
+        <NewsCopy source={Copy.FakeVsBias} />
         <InteractiveTutorial />
         <Interactive />
+        <NewsCopy source={Copy.SeekingUnbiased} />
+        <NewsCopy source={Copy.IdentifyingMediaBias} />
+        <NewsCopy source={Copy.PersonalSteps} />
+        <InteractiveAnswers />
+        <NewsCopy source={Copy.FightPersonalBias} />
         <RecommendedDiet />
+        <NewsCopy source={Copy.Patreon} />
+        <NewsCopy source={Copy.Sources} />
       </Pager>
     );
   }

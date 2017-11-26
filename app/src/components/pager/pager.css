@@ -32,14 +32,12 @@
   /* Right-align the contents of this div. */
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
   position: relative;
 }
 .page-footer-cta {
-  position: absolute;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,7 +55,7 @@
   /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
   animation: show 1.5s ease 4s 1 normal forwards, bounce 1.5s ease-in-out 4s infinite;
 }
-.page-footer-cta button {
+.page-footer button {
   cursor: pointer;
 
   /* Remove default button styles. */
