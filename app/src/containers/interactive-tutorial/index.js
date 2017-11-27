@@ -1,13 +1,14 @@
 import React from 'react';
 import tutorialImage from '../../images/tutorial.gif';
+import { InteractiveTutorial as Copy } from '../../data/news-copy';
 
 export default () => (
   <div className="newspaper-copy">
     <h1 className="newspaper-heading">
-      Rate the bias of these outlets
+      { Copy.heading }
     </h1>
     <h2 className="newspaper-subheading">
-      Drag & Drop outlets onto the bias spectrum
+      { Copy.subheading }
     </h2>
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <img src={tutorialImage} />

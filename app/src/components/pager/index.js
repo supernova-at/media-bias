@@ -12,7 +12,7 @@ import arrowImage from '../../images/icons8-right-arrow.png';
 /*
  * Members.
  */
-const previousDisabledPages = [3, 4, 8, 9];
+const previousDisabledPages = [3, 4, 9, 10];
 
 /**
  * The Pager displays the current page.

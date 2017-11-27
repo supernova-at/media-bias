@@ -3,7 +3,7 @@ export const Welcome = {
 };
 
 export const CurrentDietIntro = {
-  copy: `Let's identify your current information sources.`,
+  copy: `Where do you get your news?`,
 };
 
 export const Introduction = {
@@ -36,10 +36,6 @@ export const FakeVsBias = {
 // Hyperpartisan news
 // Invented news
 
-export const InteractiveIntro = {
-  copy: `Let's play a game.`,
-};
-
 export const SeekingUnbiased = {
   heading: 'Unbiased News',
   subheading: 'Is it even possible?',
@@ -58,6 +54,20 @@ export const SeekingUnbiased = {
 // most of us from developing a more nuanced, broader and hence more accurate
 // picture of what is going on in the world.
 // It arguably abdicates our responsibility for thinking for ourselves.
+
+export const InteractiveIntro = {
+  copy: `Let's play a game.`,
+};
+
+export const InteractiveTutorial = {
+  heading: 'Determine the bias of these outlets',
+  subheading: 'On the next page, Drag & Drop outlets onto the bias spectrum',
+};
+
+export const AnswersIntro = {
+  heading: `Let's see how you did.`,
+  subheading: `Answers according to AllSides.com and accurate as of September 2017.`,
+};
 
 export const UnbiasedAction = {
   copy: 'So what can we do instead?',
@@ -83,10 +93,6 @@ export const IdentifyingMediaBias = {
 // Do the headlines and stories match?
 // Look at where stories appear.
 // cross-check information.
-
-export const AnswersIntro = {
-  copy: `Let's examine how you rated outlets previously.`,
-};
 
 export const PersonalSteps = {
   heading: 'How to consume news',

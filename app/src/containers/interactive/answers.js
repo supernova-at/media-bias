@@ -26,6 +26,7 @@ const TICK_INTERVAL = 1500; // ms
 const Actions = {
   Correct: 'correct',
   Incorrect: 'incorrect',
+  RemoveIncorrect: 'removeIncorrect',
   ShowCorrect: 'showCorrect',
 };
 
@@ -56,7 +57,6 @@ class InteractiveAnswers extends Component {
   }
 
   componentDidMount () {
-
     setTimeout(() => {
       this.tick();
       this.interval = setInterval(this.tick, TICK_INTERVAL);
@@ -96,6 +96,7 @@ class InteractiveAnswers extends Component {
     const userAnswers = window.interactive;
 
     this.answerSteps = []
+    const corrections = [];
     Object.keys(userAnswers).forEach(key => {
       if (key === 'bucket') return;
 
@@ -127,7 +128,7 @@ class InteractiveAnswers extends Component {
             name,
             action: Actions.Incorrect
           });
-          this.answerSteps.push({
+          corrections.push({
             zone: key,
             name,
             action: Actions.ShowCorrect,
@@ -136,6 +137,8 @@ class InteractiveAnswers extends Component {
         }
       });
     });
+    this.answerSteps.push({ action: Actions.RemoveIncorrect });
+    this.answerSteps = this.answerSteps.concat(corrections);
 
     // Initialize State - merge the answer key with the user choices
     // saved from a previous screen.
@@ -152,6 +155,7 @@ class InteractiveAnswers extends Component {
       const { zone, name, action, show } = instruction;
       let updatedSourceZone;
       let updatedDestinationZone;
+      let removeIncorrect = false;
 
       switch (action) {
         case Actions.Correct:
@@ -176,10 +180,14 @@ class InteractiveAnswers extends Component {
           ]);
           break;
 
+        case Actions.RemoveIncorrect:
+          removeIncorrect = true;
+          break;
+
         default: break;
       }
 
-      this.setState(() => {
+      this.setState((prevState) => {
         let newState = { index: this.state.index + 1 };
 
         if (updatedSourceZone) {
@@ -188,6 +196,18 @@ class InteractiveAnswers extends Component {
 
         if (updatedDestinationZone) {
           newState = Object.assign(newState, { [show]: updatedDestinationZone });
+        }
+
+        if (removeIncorrect) {
+          const remove = el => el.type.displayName !== IncorrectAnswerOutlet.displayName;
+
+          newState = Object.assign(newState, {
+            [Zones.Left]: prevState[Zones.Left].filter(remove),
+            [Zones.LeanLeft]: prevState[Zones.LeanLeft].filter(remove),
+            [Zones.Center]: prevState[Zones.Center].filter(remove),
+            [Zones.LeanRight]: prevState[Zones.LeanRight].filter(remove),
+            [Zones.Right]: prevState[Zones.Right].filter(remove),
+          });
         }
 
         return newState;

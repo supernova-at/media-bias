@@ -35,14 +35,14 @@ class App extends Component {
         <CurrentDiet />
         <NewsCopy source={Copy.Introduction} />
         <NewsCopy source={Copy.FakeVsBias} />
+        <NewsCopy source={Copy.SeekingUnbiased} />
         <NewsCopy source={Copy.InteractiveIntro} />
         <InteractiveTutorial />
         <Interactive />
-        <NewsCopy source={Copy.SeekingUnbiased} />
-        <NewsCopy source={Copy.UnbiasedAction} />
-        <NewsCopy source={Copy.IdentifyingMediaBias} />
         <NewsCopy source={Copy.AnswersIntro} />
         <InteractiveAnswers />
+        <NewsCopy source={Copy.UnbiasedAction} />
+        <NewsCopy source={Copy.IdentifyingMediaBias} />
         <NewsCopy source={Copy.PersonalSteps} />
         <RecommendedDiet />
         <NewsCopy source={Copy.FightPersonalBias} />

@@ -24,20 +24,30 @@ class NewsCopy extends Component {
       )
     }
     else {
-      return (
-        <div className="newspaper-copy">
-          <h1 className="newspaper-heading">{heading}</h1>
-          <h2 className="newspaper-subheading">{subheading}</h2>
-          <div>
-            <ul>
-              <li>{ copy[0] }</li>
-              <li>{ copy[1] }</li>
-              { copy[2] && <li>{ copy[2] }</li> }
-              { copy[3] && <li>{ copy[3] }</li> }
-            </ul>
+      if (!copy) {
+        return (
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <h1>{heading}</h1>
+            <h2 className="newspaper-subheading">{subheading}</h2>
           </div>
-        </div>
-      )
+        )
+      }
+      else {
+        return (
+          <div className="newspaper-copy">
+            <h1 className="newspaper-heading">{heading}</h1>
+            <h2 className="newspaper-subheading">{subheading}</h2>
+            <div>
+              <ul>
+                <li>{ copy[0] }</li>
+                <li>{ copy[1] }</li>
+                { copy[2] && <li>{ copy[2] }</li> }
+                { copy[3] && <li>{ copy[3] }</li> }
+              </ul>
+            </div>
+          </div>
+        )
+      }
     }
   }
 };
