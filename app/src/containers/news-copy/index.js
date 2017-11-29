@@ -37,7 +37,7 @@ class NewsCopy extends Component {
           <div className="newspaper-copy">
             <h1 className="newspaper-heading">{heading}</h1>
             <h2 className="newspaper-subheading">{subheading}</h2>
-            <div>
+            <div style={{ fontSize: '1.5em' }}>
               <ul>
                 <li>{ copy[0] }</li>
                 <li>{ copy[1] }</li>

@@ -30,22 +30,33 @@ class App extends Component {
   render () {
     return (
       <Pager>
+        { /* Intro */ }
         <NewsCopy source={Copy.Welcome} />
+
+        { /* Current Diet */ }
         <NewsCopy source={Copy.CurrentDietIntro } />
         <CurrentDiet />
+
+        { /* Defining Terms */ }
         <NewsCopy source={Copy.Introduction} />
         <NewsCopy source={Copy.FakeVsBias} />
         <NewsCopy source={Copy.SeekingUnbiased} />
+
+        { /* Interactive Experience */ }
         <NewsCopy source={Copy.InteractiveIntro} />
         <InteractiveTutorial />
         <Interactive />
+
+        { /* Interactive Experience Answers */ }
         <NewsCopy source={Copy.AnswersIntro} />
         <InteractiveAnswers />
-        <NewsCopy source={Copy.UnbiasedAction} />
+
+        { /* Next Steps */ }
         <NewsCopy source={Copy.IdentifyingMediaBias} />
         <NewsCopy source={Copy.PersonalSteps} />
         <RecommendedDiet />
-        <NewsCopy source={Copy.FightPersonalBias} />
+
+        { /* End */ }
         <NewsCopy source={Copy.Patreon} />
         <NewsCopy source={Copy.Sources} />
       </Pager>

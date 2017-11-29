@@ -15,6 +15,10 @@ npm start
 Bias information sourced from https://www.allsides.com/ and accurate
 as of September 12, 2017.
 
+## Thoughts
+
+- Can get rid of "you will learn"?
+
 ## TODO: Plans
 
 - [x] Prompt for current sources. Score (center is best, extremes don't cancel each other)
@@ -33,3 +37,6 @@ as of September 12, 2017.
   * And IE?
 - [ ] Metrics / Analytics
 - [ ] Sounds
+- [ ] Mobile meta tag for tablet support?
+- [ ] Don't use the news outlet image without attribution
+- [ ] Instead of removing all the incorrect answers, fade them out
