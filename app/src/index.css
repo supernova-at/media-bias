@@ -1,5 +1,6 @@
 body {
   background-color: #e9e8df;
+  margin: 0;
 }
 
 /* Horizontally and vertically center the content in the window. */
@@ -18,7 +19,7 @@ body {
   position: fixed;
 
   /* The newspaper background image. */
-  background-image: url("images/news.png");
+  background-image: url("images/news-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

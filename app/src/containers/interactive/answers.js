@@ -18,6 +18,7 @@ import {
 // Data.
 import { sources as bias } from '../../data/bias.json';
 import { Zones } from '../../zones';
+import { InteractiveAnswers as Copy } from '../../data/news-copy';
 
 /*
  * Members.
@@ -44,13 +45,21 @@ class InteractiveAnswers extends Component {
     } = this.state;
 
     return (
-      <div className="interactive">
-        <div className="drop-zones-answers">
-          <DropZone title={Zones.Left} outlets={left} />
-          <DropZone title={Zones.LeanLeft} outlets={leanleft} />
-          <DropZone title={Zones.Center} outlets={center} />
-          <DropZone title={Zones.LeanRight} outlets={leanright} />
-          <DropZone title={Zones.Right} outlets={right} />
+      <div className="newspaper-copy">
+        <h1 className="newspaper-heading">
+          { Copy.heading }
+        </h1>
+        <h2 className="newspaper-subheading">
+          { Copy.subheading }
+        </h2>
+        <div className="interactive">
+          <div className="drop-zones-answers">
+            <DropZone title={Zones.Left} outlets={left} />
+            <DropZone title={Zones.LeanLeft} outlets={leanleft} />
+            <DropZone title={Zones.Center} outlets={center} />
+            <DropZone title={Zones.LeanRight} outlets={leanright} />
+            <DropZone title={Zones.Right} outlets={right} />
+          </div>
         </div>
       </div>
     );
@@ -208,6 +217,10 @@ class InteractiveAnswers extends Component {
             [Zones.LeanRight]: prevState[Zones.LeanRight].filter(remove),
             [Zones.Right]: prevState[Zones.Right].filter(remove),
           });
+
+          // And speed things up from here.
+          clearInterval(this.interval);
+          this.interval = setInterval(this.tick, TICK_INTERVAL / 2);
         }
 
         return newState;

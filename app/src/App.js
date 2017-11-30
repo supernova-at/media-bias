@@ -34,21 +34,17 @@ class App extends Component {
         <NewsCopy source={Copy.Welcome} />
 
         { /* Current Diet */ }
-        <NewsCopy source={Copy.CurrentDietIntro } />
         <CurrentDiet />
 
         { /* Defining Terms */ }
-        <NewsCopy source={Copy.Introduction} />
         <NewsCopy source={Copy.FakeVsBias} />
         <NewsCopy source={Copy.SeekingUnbiased} />
 
         { /* Interactive Experience */ }
-        <NewsCopy source={Copy.InteractiveIntro} />
         <InteractiveTutorial />
         <Interactive />
 
         { /* Interactive Experience Answers */ }
-        <NewsCopy source={Copy.AnswersIntro} />
         <InteractiveAnswers />
 
         { /* Next Steps */ }

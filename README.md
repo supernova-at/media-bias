@@ -15,28 +15,33 @@ npm start
 Bias information sourced from https://www.allsides.com/ and accurate
 as of September 12, 2017.
 
-## Thoughts
+## TODOs
 
-- Can get rid of "you will learn"?
+### Needs
 
-## TODO: Plans
-
-- [x] Prompt for current sources. Score (center is best, extremes don't cancel each other)
-- [x] Interactive Drag & Drop outlets to bias
-- [x] Allow re-drag & drop
-- [x] Animate CONTINUE call to action
-- [x] Highlight user's current sources. Show score. Suggest other sources.
-- [x] Outline copy
-- [x] Allow newspaper to lay things out alphabetically horizontally
-- [x] Rate & suggestion algorithm for selected biases
-- [ ] The interactive tutorial (can just be an animated image)
-- [x] Show & Compare to actual data
-- [ ] Write Copy
-- [ ] Refactor `NewsCopy` away from columns (animate 3-4 slide ins)
+- [ ] Polish the copy
+  - [ ] Bold "key idea" in longer sentences
+  - [ ] Intro the interactive experience better
+  - [ ] Improve "Identifying Media Bias" -- "Key questions" w/ additional info below?
+- [ ] Fade the interactive tutorial image into the experience
+- [ ] Custom copy for page footers
 - [ ] Show message to mobile users (http://www.websitedimensions.com/)
-  * And IE?
+  - [ ] And IE?
 - [ ] Metrics / Analytics
 - [ ] Sounds
 - [ ] Mobile meta tag for tablet support?
-- [ ] Don't use the news outlet image without attribution
+- [ ] Get actual outlet images
+- [ ] Reduce the size of an `<Outlet>`
+- [ ] Add old introduction text to welcome screen
+- [ ] Show Fake vs Bias in a table with emojis
+- [ ] Recommendation - make table here's where you are / here's how to grow
+- [ ] If you enjoyed, buy me a beer / become a Patron!
+  - [ ] Follow me
+  - [ ] Combine Patreon and Sources on one page
+  - [ ] Have sources open in new tab
+  - [ ] Restart this experience?
+
+### If time
+
 - [ ] Instead of removing all the incorrect answers, fade them out
+- [ ] Social share?

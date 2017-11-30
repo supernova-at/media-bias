@@ -2,20 +2,9 @@ export const Welcome = {
   copy: 'Welcome to the Media Bias Experience.'
 };
 
-export const CurrentDietIntro = {
-  copy: `Before we begin, where do you get your news?`,
-};
-
-/* The Current Diet picker is shown here. */
-
-export const Introduction = {
-  heading: `The big idea`,
-  subheading: 'In this interactive experience you will learn how to...',
-  copy: [
-    `Tell the difference between fake news and biased news.`,
-    `Assess the bias of news stories and outlets.`,
-    `Combat your own bias.`,
-  ],
+export const CurrentDiet = {
+  heading: 'Where do you get your news?',
+  subheading: 'Select all that apply',
 };
 
 export const FakeVsBias = {
@@ -39,19 +28,15 @@ export const SeekingUnbiased = {
   ],
 };
 
-export const InteractiveIntro = {
-  copy: `Let's play a game.`,
-};
-
 export const InteractiveTutorial = {
-  heading: 'Rate the Bias',
-  subheading: 'On the next page, place news outlets according to their bias',
+  heading: 'Let\'s Play a game',
+  subheading: 'Place news outlets according to their bias',
 };
 
 /* The Interactive game is shown here. */
 
-export const AnswersIntro = {
-  heading: `Let's see how you did.`,
+export const InteractiveAnswers = {
+  heading: `How did you do?`,
   subheading: `Answers according to AllSides.com. Accurate as of September 2017.`,
 };
 

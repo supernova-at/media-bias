@@ -14,15 +14,13 @@ import Newspaper, { Directions } from '../newspaper';
 import { SelectableOutlet } from '../../components/outlet';
 // Data.
 import { sources } from '../../data/bias.json';
+import { CurrentDiet as Copy } from '../../data/news-copy';
 
 /*
  * The entry point for the CurrentDiet page.
  */
 class CurrentDiet extends Component {
   render () {
-    const headCopy = 'Your current media diet';
-    const subheadCopy = 'Select all that apply';
-
     let outlets = sources.map((definition, index) => (
       <SelectableOutlet
         key={index}
@@ -33,8 +31,8 @@ class CurrentDiet extends Component {
 
     return (
       <Newspaper
-        heading={headCopy}
-        subhead={subheadCopy}
+        heading={Copy.heading}
+        subhead={Copy.subheading}
         columnCount={7}
         direction={Directions.Row}>
         { outlets }

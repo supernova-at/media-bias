@@ -15,6 +15,7 @@ import Outlet, { DraggableOutlet } from '../../components/outlet';
 // Data.
 import { sources as bias } from '../../data/bias.json';
 import { Zones } from '../../zones';
+import { InteractiveTutorial as Copy } from '../../data/news-copy';
 
 /*
  * The Interactive Component.
@@ -31,14 +32,22 @@ class Interactive extends Component {
     } = this.state;
 
     return (
-      <div className="interactive">
-        <OutletBucket outlets={bucket} />
-        <div className="drop-zones">
-          <DropZone title={Zones.Left} outlets={left} />
-          <DropZone title={Zones.LeanLeft} outlets={leanleft} />
-          <DropZone title={Zones.Center} outlets={center} />
-          <DropZone title={Zones.LeanRight} outlets={leanright} />
-          <DropZone title={Zones.Right} outlets={right} />
+      <div className="newspaper-copy">
+        <h1 className="newspaper-heading">
+          { Copy.heading }
+        </h1>
+        <h2 className="newspaper-subheading">
+          { Copy.subheading }
+        </h2>
+        <div className="interactive">
+          <OutletBucket outlets={bucket} />
+          <div className="drop-zones">
+            <DropZone title={Zones.Left} outlets={left} />
+            <DropZone title={Zones.LeanLeft} outlets={leanleft} />
+            <DropZone title={Zones.Center} outlets={center} />
+            <DropZone title={Zones.LeanRight} outlets={leanright} />
+            <DropZone title={Zones.Right} outlets={right} />
+          </div>
         </div>
       </div>
     );
