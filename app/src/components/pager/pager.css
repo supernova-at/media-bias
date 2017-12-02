@@ -63,12 +63,12 @@
   border: none;
   padding: 0;
   outline-width: 0;
-
-  /* And add text styles to make the buttons look like they're in a newspaper. */
-  text-transform: uppercase;
-  font-family: 'Coda, cursive';
-  font-weight: bold;
-  font-size: 1.1em;
+}
+.page-footer button:hover {
+  text-shadow: silver 2px 2px 2px;
+}
+.page-footer button > h3 {
+  color: #333;
 }
 
 @keyframes bounce {

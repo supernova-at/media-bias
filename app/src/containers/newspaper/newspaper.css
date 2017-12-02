@@ -6,22 +6,21 @@
   flex-direction: column;
 }
 .newspaper-heading {
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
-  margin: 4px 0px;
+  margin: 4px 0px 0px 0px;
 }
 .newspaper-subheading {
-  font-family: 'Iceland', cursive;
+  font-family: 'Rock Salt', cursive;
+  text-transform: capitalize;
   color: #666;
-  text-transform: uppercase;
-
+  margin: -8px 0px 0px 0px;
   text-align: center;
-  margin: 3px 0px;
 }
 
 .newspaper-columns {
   height: 100%;
-  margin-top: 15px;
+  margin-top: 5px;
   overflow-y: auto;
 
   /* Lay them out like a real newspaper. */

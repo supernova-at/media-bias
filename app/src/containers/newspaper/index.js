@@ -74,7 +74,7 @@ class Newspaper extends Component {
     return (
       <div className="newspaper">
         <h1 className="newspaper-heading">{heading}</h1>
-        <h2 className="newspaper-subheading">{subhead}</h2>
+        <h3 className="newspaper-subheading">{subhead}</h3>
         <div className="newspaper-columns">
           { columns }
         </div>

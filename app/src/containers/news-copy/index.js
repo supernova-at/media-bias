@@ -28,7 +28,7 @@ class NewsCopy extends Component {
         return (
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <h1>{heading}</h1>
-            <h2 className="newspaper-subheading">{subheading}</h2>
+            <h3 className="newspaper-subheading">{subheading}</h3>
           </div>
         )
       }
@@ -36,7 +36,7 @@ class NewsCopy extends Component {
         return (
           <div className="newspaper-copy">
             <h1 className="newspaper-heading">{heading}</h1>
-            <h2 className="newspaper-subheading">{subheading}</h2>
+            <h3 className="newspaper-subheading">{subheading}</h3>
             <div style={{ fontSize: '1.5em' }}>
               <ul>
                 <li>{ copy[0] }</li>

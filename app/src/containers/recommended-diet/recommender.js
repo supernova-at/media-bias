@@ -90,10 +90,11 @@ function calculateRecommendation (diet, meanAvg) {
   });
 
   /*
-   * Recommend from the center, preferring familiar (marked 'interactive') outlets.
+   * Recommend from the center, preferring familiar outlets.
+   * (marked 'interactive' or 'canRecommend')
    */
   const centerOutlets = notInDiet.filter(o => o.bias === Zones.Center);
-  const familiarCenters = centerOutlets.filter(o => o.interactive);
+  const familiarCenters = centerOutlets.filter(o => o.interactive || o.canReccomend);
   let targetList = (familiarCenters.length > 0) ? familiarCenters : centerOutlets;
   if (targetList.length > 0) {
     const randomIndex = Math.floor(Math.random() * targetList.length);
@@ -112,7 +113,7 @@ function calculateRecommendation (diet, meanAvg) {
     }
     else return o.bias === oppositeLean;
   });
-  const familiarLeans = leanOutlets.filter(o => o.interactive);
+  const familiarLeans = leanOutlets.filter(o => o.interactive || o.canReccomend);
   targetList = (familiarLeans.length > 0) ? familiarLeans : leanOutlets;
   if (targetList.length > 0) {
     const randomIndex = Math.floor(Math.random() * targetList.length);

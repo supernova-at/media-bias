@@ -26,6 +26,10 @@
   /* Take up the full height of a page and cut off overflows. */
   overflow: hidden;
 }
+.outlets-container > h3 {
+  text-transform: capitalize;
+  margin: 0;
+}
 .outlets-title {
   text-align: center;
 }
@@ -97,6 +101,7 @@
 }
 .drop-zone-container h3 {
   text-transform: capitalize;
+  margin: 0;
 }
 .drop-zone {
   width: 100%;

@@ -10,7 +10,8 @@
     },
     {
       "name": "BBC News",
-      "bias": "center"
+      "bias": "center",
+      "canReccomend": true
     },
     {
       "name": "Breitbart News",
@@ -84,7 +85,8 @@
     },
     {
       "name": "Politico",
-      "bias": "center"
+      "bias": "center",
+      "interactive": "true"
     },
     {
       "name": "Reason",
@@ -92,8 +94,7 @@
     },
     {
       "name": "Reuters",
-      "bias": "center",
-      "interactive": "true"
+      "bias": "center"
     },
     {
       "name": "Teen Vogue",

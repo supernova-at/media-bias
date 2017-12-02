@@ -11,6 +11,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 // Local.
 import './App.css';
 import Pager from './components/pager';
+import MobileView from './containers/mobile-view';
 
 // The pages.
 import CurrentDiet from './containers/current-diet';
@@ -28,7 +29,7 @@ import * as Copy from './data/news-copy';
  */
 class App extends Component {
   render () {
-    return (
+    return (window.innerWidth > 1024) ? (
       <Pager>
         { /* Intro */ }
         <NewsCopy source={Copy.Welcome} />
@@ -56,6 +57,8 @@ class App extends Component {
         <NewsCopy source={Copy.Patreon} />
         <NewsCopy source={Copy.Sources} />
       </Pager>
+    ) : (
+      <MobileView />
     );
   }
 

@@ -7,9 +7,9 @@ export default () => (
     <h1 className="newspaper-heading">
       { Copy.heading }
     </h1>
-    <h2 className="newspaper-subheading">
+    <h3 className="newspaper-subheading">
       { Copy.subheading }
-    </h2>
+    </h3>
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <img src={tutorialImage} />
     </div>

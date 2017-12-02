@@ -49,9 +49,9 @@ class InteractiveAnswers extends Component {
         <h1 className="newspaper-heading">
           { Copy.heading }
         </h1>
-        <h2 className="newspaper-subheading">
+        <h3 className="newspaper-subheading">
           { Copy.subheading }
-        </h2>
+        </h3>
         <div className="interactive">
           <div className="drop-zones-answers">
             <DropZone title={Zones.Left} outlets={left} />

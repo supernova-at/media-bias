@@ -12,7 +12,7 @@ import arrowImage from '../../images/icons8-right-arrow.png';
 /*
  * Members.
  */
-const previousDisabledPages = [3, 4, 9, 10];
+const previousDisabledPages = [2, 3, 6, 7];
 
 /**
  * The Pager displays the current page.
@@ -81,7 +81,7 @@ const PagerFooter = ({ hasNextPage, hasPreviousPage, fnNext, fnPrevious, current
     <div className="page-footer">
       { hasPreviousPage && (
         <button onClick={fnPrevious}>
-          Return to Page {previousPageNumber}
+          <h3>Return to Page {previousPageNumber}</h3>
         </button>
       )}
 
@@ -94,7 +94,7 @@ const PagerFooter = ({ hasNextPage, hasPreviousPage, fnNext, fnPrevious, current
             <img src={arrowImage} alt="arrow" />
           )}
           <button onClick={fnNext}>
-            Continued on Page {nextPageNumber}
+            <h3>Continued on Page {nextPageNumber}</h3>
           </button>
         </div>
       )}
