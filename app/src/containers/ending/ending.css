@@ -1,0 +1,36 @@
+.ending-container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+.the-end-contents {
+  height: 50%;
+}
+.the-end-list {
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.the-end-list span {
+  font-size: 1.25em;
+  text-align: center;
+}
+.sources-contents {
+  height: 50%;
+
+  padding-top: 25px;
+}
+.sources-list {
+  height: 140px;
+  padding-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

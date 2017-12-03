@@ -20,6 +20,7 @@ import InteractiveTutorial from './containers/interactive-tutorial';
 import Interactive from './containers/interactive';
 import InteractiveAnswers from './containers/interactive/answers';
 import NewsCopy from './containers/news-copy';
+import Ending from './containers/ending';
 
 // Data.
 import * as Copy from './data/news-copy';
@@ -54,8 +55,7 @@ class App extends Component {
         <RecommendedDiet />
 
         { /* End */ }
-        <NewsCopy source={Copy.Patreon} />
-        <NewsCopy source={Copy.Sources} />
+        <Ending />
       </Pager>
     ) : (
       <MobileView />
