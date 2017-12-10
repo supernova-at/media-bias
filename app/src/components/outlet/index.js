@@ -11,6 +11,7 @@ import classnames from 'classnames';
 
 // Local.
 import './outlet.css';
+import { sources as definitions } from '../../data/bias.json';
 import newsImage from '../../images/news.png';
 import checkImage from '../../images/icons8-ok.png';
 import xImage from '../../images/icons8-x.png';
@@ -28,10 +29,17 @@ class Outlet extends Component {
 
     return (
       <div className={outletClass}>
-        <img src={newsImage} alt="news" />
-        <span>{name}</span>
+        <img src={this._image} alt={name} />
       </div>
     );
+  }
+
+  constructor (...args) {
+    super(...args);
+
+    // Set the image.
+    const target = definitions.find(o => o.name === this.props.name);
+    this._image = (target && target.image) ? require(`../../images/processed/${target.image}`) : newsImage;
   }
 };
 

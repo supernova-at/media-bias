@@ -1,8 +1,6 @@
 .outlet {
-  height: 115px;
-  min-height: 115px;
-  width: 100px;
-  max-width: 115px;
+  width: 150px;
+  max-width: 150px;
   margin: 8px 0;
 
   /* Vertically stack the image and text. */
@@ -38,8 +36,7 @@
   animation-fill-mode: forwards;
 }
 .outlet img {
-  width: 100px;
-  height: 80px;
+  width: 150px;
 }
 .outlet span {
   font-family: 'Raleway', cursive;

@@ -33,7 +33,7 @@ class CurrentDiet extends Component {
       <Newspaper
         heading={Copy.heading}
         subhead={Copy.subheading}
-        columnCount={7}
+        columnCount={5}
         direction={Directions.Row}>
         { outlets }
       </Newspaper>

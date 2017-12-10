@@ -2,20 +2,24 @@
   "sources": [
     {
       "name": "ABC News",
-      "bias": "lean left"
+      "bias": "lean left",
+      "image": "abc.png"
     },
     {
       "name": "Associated Press (AP)",
-      "bias": "center"
+      "bias": "center",
+      "image": "ap.png"
     },
     {
       "name": "BBC News",
       "bias": "center",
+      "image": "bbc_wide.png",
       "canReccomend": true
     },
     {
       "name": "Breitbart News",
-      "bias": "right"
+      "bias": "right",
+      "image": "breitbart_wide.jpg"
     },
     {
       "name": "Buzzfeed News",
@@ -24,89 +28,109 @@
     },
     {
       "name": "C-SPAN",
-      "bias": "center"
+      "bias": "center",
+      "image": "cspan.png"
     },
     {
       "name": "CBS News",
-      "bias": "lean left"
+      "bias": "lean left",
+      "image": "cbs_wide.png"
     },
     {
       "name": "CNBC",
-      "bias": "center"
+      "bias": "center",
+      "image": "cnbc_wide.png"
     },
     {
       "name": "Drudge Report",
-      "bias": "right"
+      "bias": "right",
+      "image": "drudge_wide.jpg"
     },
     {
       "name": "Five Thirty Eight",
-      "bias": "center"
+      "bias": "center",
+      "image": "five-thirty-eight.jpg"
     },
     {
       "name": "Forbes",
-      "bias": "center"
+      "bias": "center",
+      "image": "forbes.png"
     },
     {
       "name": "Fox News",
       "bias": "right",
+      "image": "fox.png",
       "interactive": "true"
     },
     {
       "name": "Huffington Post",
       "bias": "left",
+      "image": "huffpost.jpg",
       "interactive": "true"
     },
     {
       "name": "InfoWars",
-      "bias": "right"
+      "bias": "right",
+      "image": "infowars.png"
     },
     {
       "name": "MSNBC",
       "bias": "left",
+      "image": "msnbc.png",
       "interactive": "true"
     },
     {
       "name": "NBC News",
-      "bias": "lean left"
+      "bias": "lean left",
+      "image": "nbc_wide.png"
     },
     {
       "name": "New York Times",
       "bias": "lean left",
+      "image": "ny-times.png",
       "interactive": "true"
     },
     {
       "name": "Newsweek",
-      "bias": "lean left"
+      "bias": "lean left",
+      "image": "newsweek.jpg"
     },
     {
       "name": "NPR",
       "bias": "center",
+      "image": "npr.png",
       "interactive": "true"
     },
     {
       "name": "Politico",
       "bias": "center",
+      "image": "politico.jpg",
       "interactive": "true"
     },
     {
       "name": "Reason",
-      "bias": "lean right"
+      "bias": "lean right",
+      "image": "reason.png"
     },
     {
       "name": "Reuters",
-      "bias": "center"
+      "bias": "center",
+      "image": "reuters.jpg"
     },
     {
       "name": "Teen Vogue",
-      "bias": "lean left"
+      "bias": "lean left",
+      "image": "teen-vogue.png"
     },
     {
       "name": "The Atlantic",
-      "bias": "lean left"
+      "bias": "lean left",
+      "image": "the-atlantic.png"
     },
     {
       "name": "The Hill",
-      "bias": "center"
+      "bias": "center",
+      "image": "the_hill_wide.png"
     },
     {
       "name": "USA Today",
@@ -114,16 +138,19 @@
     },
     {
       "name": "Vox",
-      "bias": "lean left"
+      "bias": "lean left",
+      "image": "vox.png"
     },
     {
       "name": "Wall Street Journal",
       "bias": "center",
+      "image": "wsj_wide.jpg",
       "interactive": "true"
     },
     {
       "name": "Washington Post",
       "bias": "lean left",
+      "image": "washington-post.png",
       "interactive": "true"
     }
   ]
