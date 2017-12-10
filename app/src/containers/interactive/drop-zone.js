@@ -55,7 +55,7 @@ class DropZone extends Component {
 
     return connectDropTarget(
       <div className="drop-zone-container">
-        <h3>{title}</h3>
+        <span className="capitalize">{title}</span>
         <div className={zoneClass}>
           { this.props.outlets }
         </div>

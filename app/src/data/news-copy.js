@@ -1,5 +1,5 @@
 export const Welcome = {
-  copy: 'Welcome to the Media Bias Experience.'
+  copy: 'Welcome to the Media Bias Experience'
 };
 
 export const CurrentDiet = {
@@ -8,8 +8,8 @@ export const CurrentDiet = {
 };
 
 export const FakeVsBias = {
-  heading: 'Fake News vs. Biased News',
-  subheading: `What's the difference?`,
+  heading: `Fake News vs. Biased News`,
+  subheading: `Let's get this out of the way first`,
   copy: [
     `Fake news stories are factually incorrect.`,
     `Fake news is usually satire, clickbait, hyperpartisan, or just plain made up.`,

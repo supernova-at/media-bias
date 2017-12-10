@@ -3,8 +3,10 @@
  */
 .interactive {
   /* Take up the whole page. */
-  height: 100%;
-  width: 100%;
+  height: 400px;
+  max-height: 400px;
+
+  margin-top: 10px;
 
   /* Display the outlets and the drop zones side by side. */
   display: flex;

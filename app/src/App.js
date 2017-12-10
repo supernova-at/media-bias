@@ -10,6 +10,7 @@ import HTML5Backend from 'react-dnd-html5-backend';
 
 // Local.
 import './App.css';
+import './common.css';
 import Pager from './components/pager';
 import MobileView from './containers/mobile-view';
 

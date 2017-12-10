@@ -10,8 +10,8 @@ export default () => (
     <h3 className="newspaper-subheading">
       { Copy.subheading }
     </h3>
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
-      <img src={tutorialImage} />
+    <div style={{ display: 'flex', justifyContent: 'center', height: '410px', maxHeight: '410px' }}>
+      <img style={{ height: '100%' }} src={tutorialImage} />
     </div>
   </div>
 );

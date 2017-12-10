@@ -11,7 +11,7 @@ import React from 'react';
 const OutletBucket = ({ outlets }) => {
   return (
     <div className="outlets-container">
-      <h3 className="outlets-title">News Outlets</h3>
+      <span className="outlets-title capitalize">News Outlets</span>
       <div className="outlets-bucket">
         { outlets }
       </div>

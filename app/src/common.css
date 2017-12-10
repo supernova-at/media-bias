@@ -1,0 +1,8 @@
+/*
+ * Common CSS for all pages.
+ * I started this file too late -
+ * more things should definitely go in here to reduce duplication.
+ */
+.capitalize {
+  text-transform: capitalize;
+}
