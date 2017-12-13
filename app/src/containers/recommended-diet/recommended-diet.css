@@ -17,25 +17,30 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
-.the-lean {
+.recco-pair > h2 > span {
   font-size: 1em;
+}
+.the-lean {
   text-transform: lowercase;
-}
-.lean-right {
-  color: maroon;
-}
-.lean-lean-right {
-  color: red;
-}
-.lean-center {
-  color: green;
-}
-.lean-lean-left {
-  color: dodgerblue;
-}
-.lean-left {
-  color: blue;
 }
 .recco-na {
   color: #666;
+}
+
+.show0 {
+  opacity: 0;
+  animation: recco-show 1s ease-in 0.25s 1 normal forwards;
+}
+.show1 {
+  opacity: 0;
+  animation: recco-show 1s ease-in 2.25s 1 normal forwards;
+}
+.show2 {
+  opacity: 0;
+  animation: recco-show 1s ease-in 4.25s 1 normal forwards;
+}
+
+@keyframes recco-show {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

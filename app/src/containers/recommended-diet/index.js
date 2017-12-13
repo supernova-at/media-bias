@@ -29,7 +29,7 @@ class RecommendedDiet extends Component {
       <Outlet key={outletName} name={outletName} />
     ));
 
-    const leanClass = classnames('the-lean', {
+    const leanClass = classnames('the-lean show1', {
       'lean-left': this._lean === Zones.Left,
       'lean-lean-left': this._lean === Zones.LeanLeft,
       'lean-center': this._lean === Zones.Center,
@@ -45,15 +45,15 @@ class RecommendedDiet extends Component {
         <div>
           <div className="recco-pair">
             <h2>
-              Your current diet is&nbsp;
+              <span>Your current diet is&nbsp;</span>
               <span className={leanClass}>
                 {this._lean}
               </span>
-              &nbsp; (with {this._deviation} deviation).
+              <span className="show1">&nbsp; (with {this._deviation} deviation).</span>
             </h2>
-            <div className="recco-outlets-list">{currentDiet}</div>
+            <div className="recco-outlets-list show0">{currentDiet}</div>
           </div>
-          <div className="recco-pair">
+          <div className="recco-pair show2">
             <h2>You should consider reading:</h2>
             <div className="recco-outlets-list">
               {showReccos && recommendations}

@@ -9,6 +9,7 @@ import classNames from 'classnames';
 
 // Local.
 import Outlet from '../../components/outlet';
+import { Zones } from '../../zones';
 
 /*
  * Members.
@@ -52,10 +53,17 @@ class DropZone extends Component {
       'drop-over': isOver && canDrop,
       'drop-available': !isOver && canDrop,
     });
+    const titleClass = classNames('capitalize', {
+      'lean-left': title === Zones.Left,
+      'lean-lean-left': title === Zones.LeanLeft,
+      'lean-center': title === Zones.Center,
+      'lean-lean-right': title === Zones.LeanRight,
+      'lean-right': title === Zones.Right,
+    });
 
     return connectDropTarget(
       <div className="drop-zone-container">
-        <span className="capitalize">{title}</span>
+        <span className={titleClass}>{title}</span>
         <div className={zoneClass}>
           { this.props.outlets }
         </div>

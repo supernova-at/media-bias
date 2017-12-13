@@ -6,3 +6,19 @@
 .capitalize {
   text-transform: capitalize;
 }
+
+.lean-right {
+  color: maroon;
+}
+.lean-lean-right {
+  color: #f33;
+}
+.lean-center {
+  color: green;
+}
+.lean-lean-left {
+  color: dodgerblue;
+}
+.lean-left {
+  color: blue;
+}

@@ -20,11 +20,11 @@ class FakeNews extends Component {
         <h3 className="newspaper-subheading">{Copy.subheading}</h3>
         <div className="fake-contents">
           <div className="fake-row">
-            <h1 className="newspaper-heading">vs.</h1>
+            <h2 className="newspaper-heading">vs.</h2>
           </div>
           <div className="fake-titles">
-            <h1 className="newspaper-heading">Fake News</h1>
-            <h1 className="newspaper-heading">Biased News</h1>
+            <h2 className="newspaper-heading">Fake News</h2>
+            <h2 className="newspaper-heading">Biased News</h2>
           </div>
           <div className="fake-row">
             <div className="body-fake fake-bullets">

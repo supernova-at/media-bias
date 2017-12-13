@@ -15,7 +15,7 @@ export const CurrentDiet = {
 };
 
 export const FakeVsBias = {
-  heading: `Fake News or Biased News?`,
+  heading: `Fake or Biased?`,
   subheading: `Let's clear this up first`,
   copy: [
     `Factually incorrect`,
@@ -23,7 +23,7 @@ export const FakeVsBias = {
     `Clickbait`,
     `Hyperpartisan`,
     `Factually correct`,
-    `Loaded language`,
+    `Contains loaded language`,
     `Not the full picture`,
   ],
 };
@@ -32,7 +32,7 @@ export const SeekingUnbiased = {
   heading: 'Unbiased News',
   subheading: 'Is it even possible?',
   copy: [
-    `We often wish for *unbiased news* - news that doesn't sway our opinions one way or another.`,
+    `We often wish for *unbiased news* - news that doesn't try to shape our opinion one way or another.`,
     'Respectable news outlets strive for this ideal but unfortunately *bias is nearly impossible to avoid*.',
     `The author's *tone, focus, and personal experience* are a few ways unwanted biases can creep in to a story.`,
     `As a reader, *you bring your own biases* too.`

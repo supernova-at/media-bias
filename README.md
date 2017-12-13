@@ -19,16 +19,8 @@ as of September 12, 2017.
 
 ### Needs
 
-- [ ] Animate "Balancing Your Diet" page
 - [ ] Metrics / Analytics
-- [ ] Sounds
-  - [ ] Mute button
-- [x] Facebook share
-  - [ ] FB image
-- [x] Twitter share
-  - [ ] Twitter image
-- [ ] Ending: Recap
-- [ ] Ending: Special thanks Dallas / icons8 / google fonts
+  * https://moz.com/blog/absolute-beginners-guide-to-google-analytics
 
 - [ ] Publish to S3 / Route 53
 - [ ] Put Google Domain in front of it

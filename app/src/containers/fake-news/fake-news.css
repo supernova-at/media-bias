@@ -25,20 +25,21 @@
 }
 .fake-titles {
   position: relative;
+  padding-top: 20px;
 }
-.fake-titles h1:first-of-type {
+.fake-titles h2:first-of-type {
   min-width: 200px;
 
   position: absolute;
-  top: -82px;
-  left: -395px;
+  top: -62px;
+  left: -390px;
 }
-.fake-titles h1:last-of-type {
+.fake-titles h2:last-of-type {
   min-width: 250px;
 
   position: absolute;
-  top: -82px;
-  left: 180px;
+  top: -62px;
+  left: 120px;
 }
 .body-fake {
   display: table;

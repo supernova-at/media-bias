@@ -9,8 +9,7 @@
   text-align: center;
 }
 .ending-container h3 {
-  margin-top: 20px;
-  margin-bottom: 5px;
+  margin: 7px 0px;
 }
 .the-end-list {
   height: 100px;
@@ -25,11 +24,18 @@
   text-align: center;
 }
 .sources-list {
-  height: 140px;
-  padding-top: 20px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.ending-row {
+  width: 100%;
+
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
 }
