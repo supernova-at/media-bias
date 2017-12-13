@@ -39,21 +39,37 @@
   line-height: 1.15em;
   color: #454545;
 }
+.news-copy-list {
+  padding-top: 20px;
+}
+.news-copy-list li {
+  margin: 20px 0px;
+  line-height: 32px;
+  color: #555;
+  opacity: 0;
+}
+
+/* Give readers two seconds to read each bullet point */
+.news-copy-list li:first-of-type {
+  animation: show 1s ease-in 0.25s 1 normal forwards;
+}
+.news-copy-list li:nth-of-type(2) {
+  animation: show 1s ease-in 3.25s 1 normal forwards;
+}
+.news-copy-list li:nth-of-type(3) {
+  animation: show 1s ease-in 6.25s 1 normal forwards;
+}
+.news-copy-list li:nth-of-type(4) {
+  animation: show 1s ease-in 9.25s 1 normal forwards;
+}
+.news-copy-list li strong {
+  font-weight: 900;
+  color: #333;
+  text-decoration: underline;
+}
 
 /* animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
 @keyframes show {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-.copy-1 {
-  animation: show 1s ease-in 0.5s 1 normal forwards;
-}
-.copy-2 {
-  animation: show 1s ease-in 3s 1 normal forwards;
-}
-.copy-3 {
-  animation: show 1s ease-in 5.5s 1 normal forwards;
-}
-.copy-4 {
-  animation: show 1s ease-in 8s 1 normal forwards;
 }

@@ -66,9 +66,10 @@
   outline-width: 0;
 }
 .page-footer button:hover {
-  text-shadow: silver 2px 2px 2px;
+  text-shadow: #bebcb0 2px 2px 2px;
 }
 .page-footer button > h3 {
+  text-transform: capitalize;
   color: #333;
 }
 

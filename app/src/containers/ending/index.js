@@ -23,7 +23,12 @@ const Ending = () => (
           Did you <strong>learn something</strong>?
           Are you <strong>inspired</strong>?
           <br />
-          <strong>Say thanks</strong> with a quick <a href="https://www.patreon.com/supernova_at" target="_blank">donation</a>.
+          <strong>Say thanks</strong>&nbsp;
+          with a quick&nbsp;
+          <Link to="https://www.patreon.com/supernova_at">
+            donation
+          </Link>
+          .
         </span>
         <span>
           <strong>Share</strong> this experience on
@@ -65,7 +70,7 @@ const Ending = () => (
 );
 
 const Link = ({ to, children }) => (
-  <a href={to} target="_blank">{children}</a>
+  <a href={to} target="_blank" rel="noopener noreferrer">{children}</a>
 );
 Link.propTypes = {
   children: PropTypes.string,

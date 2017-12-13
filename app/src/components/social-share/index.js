@@ -10,9 +10,9 @@ const SocialShare = ({ platform }) => {
   const { FBShare, TwitterShare } = Resources;
 
   return (platform === Platforms.Facebook) ? (
-    <a href={FBShare} target="_blank">FB</a>
+    <a href={FBShare} target="_blank" rel="noopener noreferrer">FB</a>
   ) : (
-    <a href={TwitterShare} target="_blank">Twitter</a>
+    <a href={TwitterShare} target="_blank" rel="noopener noreferrer">Twitter</a>
   );
 }
 

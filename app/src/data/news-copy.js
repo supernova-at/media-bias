@@ -1,5 +1,12 @@
 export const Welcome = {
-  copy: 'Welcome to the Media Bias Experience'
+  heading: 'Welcome to the Media Bias Experience',
+  copy: [
+    `Fake news?`,
+    `Is this story biased?`,
+    `Am I biased?`,
+    `Where can I find unbiased news?`,
+    `How can I balance my media diet?`,
+  ],
 };
 
 export const CurrentDiet = {
@@ -8,13 +15,16 @@ export const CurrentDiet = {
 };
 
 export const FakeVsBias = {
-  heading: `Fake News vs. Biased News`,
-  subheading: `Let's get this out of the way first`,
+  heading: `Fake News or Biased News?`,
+  subheading: `Let's clear this up first`,
   copy: [
-    `Fake news stories are factually incorrect.`,
-    `Fake news is usually satire, clickbait, hyperpartisan, or just plain made up.`,
-    `On the other hand, biased news reports the facts but slants the story - sometimes in a purposeful attempt to sway the reader.`,
-    `This is usually accomplished by using loaded language and / or not presenting the full picture.`,
+    `Factually incorrect`,
+    `Satire`,
+    `Clickbait`,
+    `Hyperpartisan`,
+    `Factually correct`,
+    `Loaded language`,
+    `Not the full picture`,
   ],
 };
 
@@ -22,9 +32,10 @@ export const SeekingUnbiased = {
   heading: 'Unbiased News',
   subheading: 'Is it even possible?',
   copy: [
-    'In an attempt to not be manipulated or swayed, we often seek unbiased news sources.',
-    'While many news outlets strive for this ideal, bias is nearly impossible to avoid.',
-    'Tone, focus, and personal experiences are a few ways unwanted biases can creep in to a story.',
+    `Folks often wish for *unbiased news*.`,
+    'Respectable news outlets strive for this ideal but unfortunately *bias is nearly impossible to avoid*.',
+    '*Tone, focus, and personal experience* are a few ways unwanted biases can creep in to a story.',
+    `As a reader, *you bring your own biases* to each story too.`
   ],
 };
 
@@ -42,25 +53,14 @@ export const InteractiveAnswers = {
 
 /* The Interactive answers is shown here. */
 
-export const IdentifyingMediaBias = {
-  heading: 'Identifying Media Bias',
-  subheading: 'How to tell if a source is biased',
-  copy: [
-    'Examine the primary sources. Are they biased? Do the stories accurately reflect them?',
-    'Determine the points of view of the stories. Who does this point of view benefit?',
-    'Do they use loaded language, stereotypes, or double standards?',
-    'Cross-check information against other media outlets. Are they the only one reporting this?',
-  ],
-};
-
 export const PersonalSteps = {
   heading: 'How to consume news',
   subheading: 'Steps you can take',
   copy: [
-    'Read past the headline. Check the source, author, date, and time of publication.',
-    `Examine the primary source(s). Do you agree with the author's conclusions?`,
-    `Attempt to discover alternate views of the same events.`,
-    'Seek out a balanced media diet to gain a broader perspective.',
+    '*Read past the headline*. Check the source, author, date, and time of publication. Beware of loaded language, stereotypes, or double standards.',
+    `*Examine the primary source(s)*. Are they biased? Do the stories accurately reflect them? Instead of reading a story about a speech, watch the speech itself and form your own opinion.`,
+    `Attempt to *discover alternate views* of the same events by cross-checking information against other media outlets.`,
+    '*Balance your media diet* to gain a broader perspective.',
   ],
 };
 

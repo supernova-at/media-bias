@@ -15,6 +15,8 @@ import Pager from './components/pager';
 import MobileView from './containers/mobile-view';
 
 // The pages.
+import Introduction from './containers/introduction';
+import FakeNews from './containers/fake-news';
 import CurrentDiet from './containers/current-diet';
 import RecommendedDiet from './containers/recommended-diet';
 import InteractiveTutorial from './containers/interactive-tutorial';
@@ -34,14 +36,15 @@ class App extends Component {
     return (window.innerWidth > 1024) ? (
       <Pager>
         { /* Intro */ }
-        <NewsCopy source={Copy.Welcome} />
+        <Introduction />
 
         { /* Current Diet */ }
         <CurrentDiet />
 
         { /* Defining Terms */ }
-        <NewsCopy source={Copy.FakeVsBias} />
+        <FakeNews />
         <NewsCopy source={Copy.SeekingUnbiased} />
+        <NewsCopy source={Copy.PersonalSteps} />
 
         { /* Interactive Experience */ }
         <InteractiveTutorial />
@@ -51,8 +54,6 @@ class App extends Component {
         <InteractiveAnswers />
 
         { /* Next Steps */ }
-        <NewsCopy source={Copy.IdentifyingMediaBias} />
-        <NewsCopy source={Copy.PersonalSteps} />
         <RecommendedDiet />
 
         { /* End */ }

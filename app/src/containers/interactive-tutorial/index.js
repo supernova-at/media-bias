@@ -11,7 +11,7 @@ export default () => (
       { Copy.subheading }
     </h3>
     <div style={{ display: 'flex', justifyContent: 'center', height: '410px', maxHeight: '410px' }}>
-      <img style={{ height: '100%' }} src={tutorialImage} />
+      <img style={{ height: '100%' }} src={tutorialImage} alt="interactive tutorial" />
     </div>
   </div>
 );

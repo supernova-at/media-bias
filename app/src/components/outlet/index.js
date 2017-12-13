@@ -39,7 +39,7 @@ class Outlet extends Component {
 
     // Set the image.
     const target = definitions.find(o => o.name === this.props.name);
-    this._image = (target && target.image) ? require(`../../images/processed/${target.image}`) : newsImage;
+    this._image = (target && target.image) ? require(`../../images/outlets/${target.image}`) : newsImage;
   }
 };
 

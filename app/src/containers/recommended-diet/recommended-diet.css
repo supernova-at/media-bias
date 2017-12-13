@@ -1,0 +1,41 @@
+.recco-pair {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.recco-pair h2 {
+  margin-bottom: 0px;
+}
+.recco-outlets-list {
+  max-height: 198px;
+  overflow-y: hidden;
+  width: 84%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.the-lean {
+  font-size: 1em;
+  text-transform: lowercase;
+}
+.lean-right {
+  color: maroon;
+}
+.lean-lean-right {
+  color: red;
+}
+.lean-center {
+  color: green;
+}
+.lean-lean-left {
+  color: dodgerblue;
+}
+.lean-left {
+  color: blue;
+}
+.recco-na {
+  color: #666;
+}

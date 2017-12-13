@@ -31,7 +31,6 @@ export const Deviations = {
 
 const PersonalLeanRight = ['Wall Street Journal', 'Forbes'];
 
-
 /**
  * The Recommender takes the user's current diet, scores it, and makes recommendations.
  * @param {Array} currentDietNames - An array of names of outlets.
@@ -42,6 +41,14 @@ const Recommender = (currentDietNames) => {
     // Map the name of an outlet to its full object.
     return data.filter(outlet => outlet.name === name)[0];
   });
+
+  if (diet.length === 0) {
+    return {
+      lean: Leans[3],
+      deviation: Deviations.Low,
+      recommendation: calculateRecommendation(diet, 3),
+    };
+  }
 
   const meanAvg = calculateScore(diet) / diet.length;
   const lean = Leans[Math.round(meanAvg)];
@@ -104,6 +111,10 @@ function calculateRecommendation (diet, meanAvg) {
   /*
    * Recommend from the opposite side of center, again preferring familiar outlets.
    */
+  // Early out if we're exactly in the center.
+  // There is no 'opposite side of center' in this case.
+  if (meanAvg === Scores[Zones.Center]) { return result; }
+
   const oppositeLean = (meanAvg > Scores[Zones.Center]) ? Zones.LeanLeft : Zones.LeanRight;
   const leanOutlets = notInDiet.filter(o => {
     // The data doesn't have many outlets that 'lean right'.

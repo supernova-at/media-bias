@@ -220,7 +220,7 @@ class InteractiveAnswers extends Component {
 
           // And speed things up from here.
           clearInterval(this.interval);
-          this.interval = setInterval(this.tick, TICK_INTERVAL / 2);
+          this.interval = setInterval(this.tick, (2 * TICK_INTERVAL / 3));
         }
 
         return newState;
