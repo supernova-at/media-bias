@@ -4,9 +4,13 @@
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  
+  text-align: center;
 }
-.the-end-contents {
-  height: 50%;
+.ending-container h3 {
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 .the-end-list {
   height: 100px;
@@ -19,11 +23,6 @@
 .the-end-list span {
   font-size: 1.25em;
   text-align: center;
-}
-.sources-contents {
-  height: 50%;
-
-  padding-top: 25px;
 }
 .sources-list {
   height: 140px;

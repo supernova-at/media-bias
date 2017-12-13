@@ -13,7 +13,7 @@
   align-items: center;
 
   opacity: 0;
-  animation: bullet-show 1s ease-in 1.25s 1 normal forwards;
+  animation: bullet-show 1s ease-in 0.75s 1 normal forwards;
 }
 .fake-row {
   width: 100%;
