@@ -37,10 +37,10 @@ const Ending = () => (
         { /* Special Thanks */ }
         <h3 className="newspaper-subheading">Special Thanks</h3>
         <div className="sources-list">
-          <Link to="http://ncase.me/trust/">Inspired by The Evolution of Trust</Link>
+          <Link to="http://ncase.me/trust/">Inspired by The Evolution of Trust by Nicky Case</Link>
           <Link to="https://icons8.com">Icon pack by Icons8</Link>
           <Link to="https://www.looperman.com">Sound by Fanto8BC via Looperman</Link>
-          <Link to="https://twitter.com/DallasNichole">Design help from @DallasNichole</Link>
+          <Link to="https://twitter.com/DallasNichole">UX help from @DallasNichole</Link>
         </div>
       </div>
 
@@ -77,7 +77,7 @@ const Ending = () => (
 
 const Link = ({ to, children }) => (
   <a href={to} target="_blank" rel="noopener noreferrer" onClick={() => {
-    ga('send', 'event', {
+    window.ga('send', 'event', {
       eventCategory: 'Ending Page',
       eventAction: 'Link Clicked',
       eventLabel: to,

@@ -77,21 +77,21 @@ class RecommendedDiet extends Component {
     this._recommendation = recommendation;
 
     // Record the lean.
-    ga('send', 'event', {
+    window.ga('send', 'event', {
       eventCategory: 'Recommendation Page',
       eventAction: 'User Lean',
       eventLabel: this._lean,
       nonInteraction: true,
     });
     // Record the deviation.
-    ga('send', 'event', {
+    window.ga('send', 'event', {
       eventCategory: 'Recommendation Page',
       eventAction: 'Lean Deviation',
       eventLabel: this._deviation,
       nonInteraction: true,
     });
     // Record our recommendation.
-    ga('send', 'event', {
+    window.ga('send', 'event', {
       eventCategory: 'Recommendation Page',
       eventAction: 'Outlets Reccomended',
       eventLabel: this._recommendation.map(outlet => outlet.name).join(','),

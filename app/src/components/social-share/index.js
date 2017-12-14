@@ -19,7 +19,7 @@ const SocialShare = ({ platform, size }) => {
 
   return (platform === Platforms.Facebook) ? (
     <a href={FBShare} target="_blank" rel="noopener noreferrer" onClick={() => {
-      ga('send', 'event', {
+      window.ga('send', 'event', {
         eventCategory: 'Social Share',
         eventAction: 'Facebook Clicked',
       });
@@ -28,7 +28,7 @@ const SocialShare = ({ platform, size }) => {
     </a>
   ) : (
     <a href={TwitterShare} target="_blank" rel="noopener noreferrer" onClick={() => {
-      ga('send', 'event', {
+      window.ga('send', 'event', {
         eventCategory: 'Social Share',
         eventAction: 'Twitter Clicked',
       });

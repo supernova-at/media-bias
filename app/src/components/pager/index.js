@@ -68,7 +68,7 @@ class Pager extends Component {
    * Event Handlers.
    */
   nextPage () {
-    ga('send', 'event', {
+    window.ga('send', 'event', {
       eventCategory: 'Next Page',
       eventAction: 'click',
       eventLabel: 'Current Page',

@@ -1,5 +1,5 @@
-const site_url = 'http://www.mediabiasexperience.com';
-const share_text = 'Learn how to navigate media bias and think for yourself. @supernova_at';
+const site_url = 'http://mediabiasexperience.com';
+const share_text = `Learn how to navigate media bias and think for yourself: ${site_url} @supernova_at`;
 
 const webLink = encodeURIComponent(site_url);
 const shareText = encodeURIComponent(share_text);

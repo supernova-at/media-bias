@@ -19,8 +19,8 @@ as of September 12, 2017.
 
 ### Needs
 
-- [ ] Publish to S3 / Route 53
-- [ ] Put Google Domain in front of it
+- [ ] Tutorial Image (https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-assets-outside-of-the-module-system)
+- [ ] Play Again (www. not working?)
 
 ### If time
 
