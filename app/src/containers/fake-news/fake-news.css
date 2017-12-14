@@ -53,10 +53,11 @@
 }
 .fake-bullet span {
   display: table-cell;
-  padding: 0px 3px;
+  padding: 0px 5px;
+  vertical-align: middle;
 }
 .fake-emoji {
-  font-size: 2.5em;
+  width: 50px;
 }
 .fake-bullet span:nth-of-type(2) {
   text-align: left;
