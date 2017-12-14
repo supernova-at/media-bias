@@ -65,19 +65,6 @@ class RecommendedDiet extends Component {
         </div>
       </div>
     );
-
-    // return (
-    //   <div>
-    //     <h3>Diet</h3>
-    //     <div>{ this.context.diet.join(', ') }</div>
-    //     <h3>Lean</h3>
-    //     <div>{ this._lean }</div>
-    //     <h3>Deviation</h3>
-    //     <div>{ this._deviation }</div>
-    //     <h3>Recommendation</h3>
-    //     <div>{ recommendations }</div>
-    //   </div>
-    // );
   }
 
   constructor (...args) {
@@ -88,6 +75,28 @@ class RecommendedDiet extends Component {
     this._lean = lean;
     this._deviation = deviation;
     this._recommendation = recommendation;
+
+    // Record the lean.
+    ga('send', 'event', {
+      eventCategory: 'Recommendation Page',
+      eventAction: 'User Lean',
+      eventLabel: this._lean,
+      nonInteraction: true,
+    });
+    // Record the deviation.
+    ga('send', 'event', {
+      eventCategory: 'Recommendation Page',
+      eventAction: 'Lean Deviation',
+      eventLabel: this._deviation,
+      nonInteraction: true,
+    });
+    // Record our recommendation.
+    ga('send', 'event', {
+      eventCategory: 'Recommendation Page',
+      eventAction: 'Outlets Reccomended',
+      eventLabel: this._recommendation.map(outlet => outlet.name).join(','),
+      nonInteraction: true,      
+    });
   }
 };
 

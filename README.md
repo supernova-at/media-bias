@@ -19,9 +19,6 @@ as of September 12, 2017.
 
 ### Needs
 
-- [ ] Metrics / Analytics
-  * https://moz.com/blog/absolute-beginners-guide-to-google-analytics
-
 - [ ] Publish to S3 / Route 53
 - [ ] Put Google Domain in front of it
 

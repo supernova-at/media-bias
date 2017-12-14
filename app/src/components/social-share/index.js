@@ -18,11 +18,21 @@ const SocialShare = ({ platform, size }) => {
   const twitterImage = `https://png.icons8.com/twitter/color/${size}/000000`;
 
   return (platform === Platforms.Facebook) ? (
-    <a href={FBShare} target="_blank" rel="noopener noreferrer">
+    <a href={FBShare} target="_blank" rel="noopener noreferrer" onClick={() => {
+      ga('send', 'event', {
+        eventCategory: 'Social Share',
+        eventAction: 'Facebook Clicked',
+      });
+    }}>
       <img src={fbImage} alt="facebook icon" />
     </a>
   ) : (
-    <a href={TwitterShare} target="_blank" rel="noopener noreferrer">
+    <a href={TwitterShare} target="_blank" rel="noopener noreferrer" onClick={() => {
+      ga('send', 'event', {
+        eventCategory: 'Social Share',
+        eventAction: 'Twitter Clicked',
+      });
+    }}>
       <img src={twitterImage} alt="twitter icon" />
     </a>
   );

@@ -76,7 +76,15 @@ const Ending = () => (
 );
 
 const Link = ({ to, children }) => (
-  <a href={to} target="_blank" rel="noopener noreferrer">{children}</a>
+  <a href={to} target="_blank" rel="noopener noreferrer" onClick={() => {
+    ga('send', 'event', {
+      eventCategory: 'Ending Page',
+      eventAction: 'Link Clicked',
+      eventLabel: to,
+    });
+  }}>
+    {children}
+  </a>
 );
 Link.propTypes = {
   children: PropTypes.string,

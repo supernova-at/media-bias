@@ -126,6 +126,14 @@ class SelectableOutlet extends Component {
 
   toggleSelect = () => {
     const { name, onClick } = this.props;
+
+    ga('send', 'event', {
+      eventCategory: 'Current Diet',
+      eventAction: (this.state.selected) ? 'Outlet Deselected' : 'Outlet Selected',
+      eventLabel: 'Outlet Name',
+      eventValue: name,
+    });
+
     this.setState({ selected: !this.state.selected }, () => onClick(name));
   }
 };
